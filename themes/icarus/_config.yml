@@ -76,6 +76,7 @@ navbar:
     时间轴: /archives
     分类: /categories
     标签: /tags
+    工坊(building): https://google.com
   # 导航蓝右边的图标如github
   links:
     GitHub:
@@ -109,14 +110,13 @@ search:
   type: insight
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
-#comment:
-#  type: gitalk
-#  client_id: xxxxxxxxxxxxxxxxxxxx
-#  client_secret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#  repo: Some-of-Your-GitHub-Repo
-#  owner: you_github_name
-#  admin:
-#    - you_github_name
+comment:
+  type: gitalk
+  client_id: 5b5277f2333740fd2d26
+  client_secret: 4358072fca17d8eb77cad3ae8aaa2752852cc90f
+  repo: radoapx.github.io
+  owner: radoapx
+  admin: radoapx
 #  per_page: 20                    # 可选填
 #  distraction_free_mode: false    # 可选填
 #  pager_direction: last           # 可选填
@@ -124,13 +124,14 @@ search:
 #  proxy:                          # 可选填
 #  flip_move_options:              # 可选填
 #  enable_hotkey: true             # 可选填
+
 # 文章下面的打赏模块
 # https://blog.zhangruipeng.me/hexo-theme-icarus/categories/Plugins/Donation/
 donates:
   # Alipay donate button configurations
   - type: alipay
     # Alipay qrcode image URL
-    qrcode: ''
+    qrcode: 'https://cdn.jsdelivr.net/gh/radoapx/rad-figure-bed/PicGo/blog/donates/20200416220326.JPG'
   # "Buy me a coffee" donate button configurations
   #  - type: buymeacoffee
   #    # URL to the "Buy me a coffee" page
@@ -148,13 +149,15 @@ donates:
   # Wechat donate button configurations
   - type: wechat
     # Wechat qrcode image URL
-    qrcode: ''
+    qrcode: 'https://cdn.jsdelivr.net/gh/radoapx/rad-figure-bed/PicGo/blog/donates/20200416220459.JPG'
+
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
-#share:
-#    type: sharethis
-#    # URL to the ShareThis share plugin script
-#    install_url: ''
+share:
+   type: sharethis
+   # URL to the ShareThis share plugin script
+   install_url: 'https://platform-api.sharethis.com/js/sharethis.js#property=5e987269931c3700123db905&product=inline-share-buttons'
+
 # Sidebar configurations.
 # Please be noted that a sidebar is only visible when it has at least one widget
 sidebar:
@@ -165,10 +168,10 @@ sidebar:
   # Right sidebar configurations
   right:
     # Whether the sidebar sticks to the top when page scrolls
-    sticky: false
-# Sidebar widget configurations
-# http://ppoffice.github.io/hexo-theme-icarus/categories/Widgets/
+    sticky: true
+
 # widgets是显示个人信息关注等的那个框
+# http://ppoffice.github.io/hexo-theme-icarus/categories/Widgets/
 widgets:
   # Profile widget configurations
   - # Where should the widget be placed, left sidebar or right sidebar
@@ -195,12 +198,12 @@ widgets:
         url: 'https://github.com/radoapx'
       # Wechat:
       #   icon: fab fa-weixin
-      #   url: 
+      #   url:
       Twitter:
         icon: fab fa-twitter
         url: 'https://twitter.com/keep_escalating'
       # Juejin:
-      #   icon: 
+      #   icon:
       #   url: 'https://juejin.im/user/5c84802fe51d4513ff0a3e8c'
   #      Dribbble:
   #        icon: fab fa-dribbble
@@ -208,6 +211,7 @@ widgets:
   #      RSS:
   #        icon: fas fa-rss
   #        url: /
+
   # 文章页面下的目录
   - # Where should the widget be placed, left sidebar or right sidebar
     position: right
@@ -216,6 +220,10 @@ widgets:
   - # Where should the widget be placed, left sidebar or right sidebar
     position: right
     type: categories
+  # 标签卡片
+  - # Where should the widget be placed, left sidebar or right sidebar
+    position: right
+    type: tags
   # 最近发布文章
   - # Where should the widget be placed, left sidebar or right sidebar
     position: left
@@ -224,10 +232,7 @@ widgets:
   #  - # Where should the widget be placed, left sidebar or right sidebar
   #    position: left
   #    type: archives
-  # 标签卡片
-  - # Where should the widget be placed, left sidebar or right sidebar
-    position: right
-    type: tags
+
   # Google FeedBurner email subscription widget configurations
   #  - # Where should the widget be placed, left sidebar or right sidebar
   #    position: left
@@ -254,16 +259,20 @@ widgets:
 plugins:
   # Enable page startup animations
   animejs: true
+
   # Show the "back to top" button
   back_to_top: true
+
   # Baidu Analytics plugin settings
   # https://tongji.baidu.com
   baidu_analytics:
     # Baidu Analytics tracking ID
     tracking_id:
+
   # BuSuanZi site/page view counter
   # https://busuanzi.ibruce.info
-  busuanzi: false
+  busuanzi: true
+
   # CNZZ statistics
   # https://www.umeng.com/web
   cnzz:
@@ -271,30 +280,38 @@ plugins:
     id:
     # CNZZ website id
     web_id:
+
   # Enable the lightGallery and Justified Gallery plugins
   # https://ppoffice.github.io/hexo-theme-icarus/Plugins/General/gallery-plugin/
   gallery: true
+
   # Google Analytics plugin settings
   # https://analytics.google.com
   google_analytics:
     # Google Analytics tracking ID
     tracking_id:
+
   # Hotjar user feedback plugin
   # https://www.hotjar.com/
   hotjar:
     # Hotjar site id
     site_id:
+
   # Enable the KaTeX math typesetting supprot
   # https://katex.org/
   katex: false
+
   # Enable the MathJax math typesetting support
   # https://www.mathjax.org/
   mathjax: false
+
   # Enable the Outdated Browser plugin
   # http://outdatedbrowser.com/
   outdated_browser: false
+
   # Show a progress bar at top of the page on page loading
   progressbar: true
+
 # CDN provider settings
 # https://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/speed-up-your-site-with-custom-cdn/
 providers:
