@@ -111,13 +111,13 @@ search:
   type: insight
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
-comment:
-  type: gitalk
-  client_id: 5b5277f2333740fd2d26
-  client_secret: 4358072fca17d8eb77cad3ae8aaa2752852cc90f
-  repo: radoapx.github.io
-  owner: radoapx
-  admin: radoapx
+# comment:
+  # type: gitalk
+  # client_id: 5b5277f2333740fd2d26
+  # client_secret: 4358072fca17d8eb77cad3ae8aaa2752852cc90f
+  # repo: radoapx.github.io
+  # owner: radoapx
+  # admin: radoapx
 #  per_page: 20                    # 可选填
 #  distraction_free_mode: false    # 可选填
 #  pager_direction: last           # 可选填
@@ -326,7 +326,3 @@ providers:
   fontcdn: google
   # Name or URL of the fontawesome icon font CDN provider
   iconcdn: fontawesome
-
-auto_excerpt:
-  enable: true
-  length: 150
