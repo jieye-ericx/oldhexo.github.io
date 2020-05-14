@@ -21,3 +21,8 @@
 
 5. zh-CN.yml
   follow: '在Github上关注我'
+
+6. profile.jsx
+  删除 {followLink ? <div class="level">
+                    <a class="level-item button is-primary is-rounded" href={followLink} target="_blank" rel="noopener">{followTitle}</a>
+                </div> : null}

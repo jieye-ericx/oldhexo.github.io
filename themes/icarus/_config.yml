@@ -104,6 +104,7 @@ article:
   thumbnail: true
   # Whether to show estimated article reading time
   readtime: true
+
 # Search plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Search/
 search:
@@ -154,9 +155,9 @@ donates:
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
 share:
-   type: sharethis
-   # URL to the ShareThis share plugin script
-   install_url: 'https://platform-api.sharethis.com/js/sharethis.js#property=5e987269931c3700123db905&product=inline-share-buttons'
+  type: sharethis
+  # URL to the ShareThis share plugin script
+  install_url: 'https://platform-api.sharethis.com/js/sharethis.js#property=5e987269931c3700123db905&product=inline-share-buttons'
 
 # Sidebar configurations.
 # Please be noted that a sidebar is only visible when it has at least one widget
@@ -190,7 +191,7 @@ widgets:
     # Email address for the Gravatar
     gravatar:
     # URL or path for the follow button
-    follow_link: 'https://github.com/radoapx'
+    follow_link: ''
     # Links to be shown on the bottom of the profile widget
     social_links:
       Github:
@@ -202,6 +203,9 @@ widgets:
       Twitter:
         icon: fab fa-twitter
         url: 'https://twitter.com/keep_escalating'
+      Gmail:
+        icon: fas fa-envelope
+        url: 'mailto:radoapx@gmail.com'
       # Juejin:
       #   icon:
       #   url: 'https://juejin.im/user/5c84802fe51d4513ff0a3e8c'
@@ -255,6 +259,7 @@ widgets:
     links:
       Apple: 'https://www.apple.com.cn/'
       HDU OJ: 'http://acm.hdu.edu.cn/'
+      TrumanGu: 'https://www.trumangu.fun/'
 # Plugin configurations
 plugins:
   # Enable page startup animations
@@ -267,7 +272,7 @@ plugins:
   # https://tongji.baidu.com
   baidu_analytics:
     # Baidu Analytics tracking ID
-    tracking_id:
+    tracking_id: '0b3fb888f3a355444b0a19c06a5721bf'
 
   # BuSuanZi site/page view counter
   # https://busuanzi.ibruce.info
@@ -321,3 +326,7 @@ providers:
   fontcdn: google
   # Name or URL of the fontawesome icon font CDN provider
   iconcdn: fontawesome
+
+auto_excerpt:
+  enable: true
+  length: 150
