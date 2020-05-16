@@ -142,11 +142,11 @@ donates:
   #    # URL to the Patreon page
   #    url: ''
   # Paypal donate button configurations
-  #  - type: paypal
-  #    # Paypal business ID or email address
-  #    business: ''
-  #    # Currency code
-  #    currency_code: USD
+  - type: paypal
+    # Paypal business ID or email address
+    business: '845225343@qq.com'
+    # Currency code
+    currency_code: USD
   # Wechat donate button configurations
   - type: wechat
     # Wechat qrcode image URL
@@ -325,4 +325,4 @@ providers:
   # Name or URL template of the webfont CDN provider
   fontcdn: google
   # Name or URL of the fontawesome icon font CDN provider
-  iconcdn: fontawesome
+  iconcdn: loli
