@@ -10839,7 +10839,7 @@ article.article .content blockquote footer strong + cite {
 .navbar-main .navbar-item {
   display: flex;
   align-items: center;
-  padding: 1.25rem 0.75rem;
+  padding: 0.5rem 0.75rem;
   margin: 0 0;
 }
 .navbar-main .navbar-item.is-active {
@@ -10858,7 +10858,10 @@ article.article .content blockquote footer strong + cite {
   }
 }
 .navbar-logo img {
-  max-height: 1.75rem;
+  max-height: 3rem;
+}
+footer.footer {
+  padding: 1.5rem 1.5rem 1.5rem;
 }
 @media screen and (max-width: 768px) {
   footer.footer .level-start {
@@ -10876,7 +10879,7 @@ footer.footer .level-end .field {
   }
 }
 .footer-logo img {
-  max-height: 1.75rem;
+  max-height: 3rem;
 }
 .pagination .pagination-link a,
 .pagination .pagination-ellipsis a,

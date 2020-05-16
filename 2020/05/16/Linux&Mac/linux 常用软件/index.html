@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.0"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>linux 常用软件 - Radoapx&#039;s Zone</title><meta description="一些shell程序命令整理"><meta property="og:type" content="blog"><meta property="og:title" content="linux 常用软件"><meta property="og:url" content="http://yoursite.com/"><meta property="og:site_name" content="Radoapx&#039;s Zone"><meta property="og:description" content="一些shell程序命令整理"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/radoapx/rad-figure-bed/PicGo/blogs/linux-softs/20200514215135.png"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/radoapx/rad-figure-bed/PicGo/blogs/linux-softs/20200514215156.png"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/radoapx/rad-figure-bed/PicGo/blogs/linux-softs/20200514215207.png"><meta property="article:published_time" content="2020-05-16T06:45:05.014Z"><meta property="article:modified_time" content="2020-05-16T06:45:05.015Z"><meta property="article:author" content="Radoapx"><meta property="article:tag" content="Linux"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/radoapx/rad-figure-bed/PicGo/blogs/linux-softs/20200514215135.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com/2020/05/16/Linux&Mac/linux%20%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/"},"headline":"Radoapx's Zone","image":["https://cdn.jsdelivr.net/gh/radoapx/rad-figure-bed/PicGo/blogs/linux-softs/20200514215135.png","https://cdn.jsdelivr.net/gh/radoapx/rad-figure-bed/PicGo/blogs/linux-softs/20200514215156.png","https://cdn.jsdelivr.net/gh/radoapx/rad-figure-bed/PicGo/blogs/linux-softs/20200514215207.png"],"datePublished":"2020-05-16T06:45:05.014Z","dateModified":"2020-05-16T06:45:05.015Z","author":{"@type":"Person","name":"Radoapx"},"description":"一些shell程序命令整理"}</script><link rel="canonical" href="http://yoursite.com/2020/05/16/Linux&amp;Mac/linux%20%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/"><link rel="icon" href="/img/favicon.svg"><script src="/live2d-widget/autoload.js"></script><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><script>var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?0b3fb888f3a355444b0a19c06a5721bf";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();</script><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo%201000.png" alt="Radoapx&#039;s Zone" height="58"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/archives">时间轴</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="https://google.com">工坊(building)</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="GitHub" href="https://github.com/radoapx"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-05-16T06:45:05.014Z" title="2020-05-16T06:45:05.014Z">2020-05-16</time><span class="level-item"><a class="link-muted" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></span><span class="level-item">31 分钟 读完 (大约 4666 个字)</span><span class="level-item" id="busuanzi_container_page_pv"><i class="far fa-eye"></i>&nbsp;&nbsp;<span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">linux 常用软件</h1><div class="content"><p>一些shell程序命令整理</p>
+<a id="more"></a>
+<h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p><img src="https://cdn.jsdelivr.net/gh/radoapx/rad-figure-bed/PicGo/blogs/linux-softs/20200514215135.png" alt=""></p>
+<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><h4 id="用户名设置"><a href="#用户名设置" class="headerlink" title="用户名设置"></a>用户名设置</h4><p>安装完成后，还需要最后一步设置，在命令行输入：<br>$ git config –global user.name “Your Name”<br>$ git config –global user.email “<a href="mailto:email@example.com">email@example.com</a>“</p>
+<p>要随时掌握工作区的状态，使用git status命令。如果git status告诉你有文件被修改过，用git diff可以查看修改。</p>
+<p>HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭</p>
+<h4 id="git-log-查看历史"><a href="#git-log-查看历史" class="headerlink" title="git log 查看历史"></a>git log 查看历史</h4><p>穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 每个提交在一行内显示</span></span><br><span class="line">git <span class="built_in">log</span> --oneline</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在所有提交日志中搜索包含「homepage」的提交</span></span><br><span class="line">git <span class="built_in">log</span> --all --grep=<span class="string">'homepage'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取某人的提交日志</span></span><br><span class="line">git <span class="built_in">log</span> --author=<span class="string">"Maxence"</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="git-reflog-reset"><a href="#git-reflog-reset" class="headerlink" title="git reflog/reset"></a>git reflog/reset</h4><p>要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获取所有操作历史</span></span><br><span class="line">git reflog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重置到相应提交</span></span><br><span class="line">git reset HEAD@&#123;4&#125;</span><br><span class="line"><span class="comment"># ……或者……</span></span><br><span class="line">git reset --hard &lt;提交的哈希值&gt;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p>工作区（Working Directory）就是你在电脑里能看到的目录，比如我的learngit文件夹就是一个工作区：</p>
+</li>
+<li><p>版本库（Repository）工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。</p>
+</li>
+<li><p>我们前面讲了，Git管理的是修改，当你用git add命令后，在工作区的第一次修改被放入暂存区，准备提交，但是，在工作区的第二次修改并没有放入暂存区，所以，git commit只负责把暂存区的修改提交了，也就是第一次的修改被提交了，第二次的修改不会被提交。</p>
+</li>
+<li><p>提交后，用git diff HEAD – readme.txt命令可以查看工作区和版本库里面最新版本的区别：每次修改，如果不用git add到暂存区，那就不会加入到commit中。</p>
+</li>
+<li><p>要关联一个远程库，使用命令</p>
+<p><code>git remote add origin git@server-name:path/repo-name.git</code></p>
+<p>删除远程库 <code>git remote rm origin</code></p>
+<p>关联后，使用命令<code>git push -u origin master</code>第一次推送master分支的所有内容；</p>
+<p>此后，每次本地提交后，只要有必要，就可以使用命令<code>git push origin master</code>推送最新修改；</p>
+</li>
+<li><p><code>git remote</code> 你的项目关联的远程存储库列表</p>
+</li>
+<li><p>要克隆一个仓库，首先必须知道仓库的地址，然后使用git clone命令克隆。<br><code>git clone git@github.com:michaelliao/gitskills.git</code></p>
+</li>
+<li><p>首先，我们创建dev分支，然后切换到dev分支：</p>
+<p><code>git checkout -b dev    //Switched to a new branch &#39;dev&#39;</code></p>
+<p> git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：</p>
+<blockquote>
+<p><code>git branch dev</code></p>
+<p><code>git checkout dev</code></p>
+</blockquote>
+<p> 然后，查看当前分支：</p>
+<p> <code>git branch</code></p>
+<p> 会列出所有分支，当前分支前面会标一个*号。</p>
+<p> 然后，我们就可以在dev分支上正常提交，比如对readme.txt做个修改，加上一行：<br> <code>Creating a new branch is quick.</code></p>
+<p> 然后提交：</p>
+ <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">add</span><span class="bash"> readme.txt </span></span><br><span class="line">$ git commit -m <span class="string">"branch test"</span></span><br></pre></td></tr></table></figure>
+
+<p> 现在，dev分支的工作完成，我们就可以切换回master分支：</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">//Switched to branch 'master'</span><br></pre></td></tr></table></figure>
+
+<p> 切换回master分支后，再查看一个readme.txt文件，刚才添加的内容不见了！<br> 因为那个提交是在dev分支上，而master分支此刻的提交点并没有变. </p>
+<p> 现在，我们把dev分支的工作成果合并到master分支上：<br> <code>git merge dev</code></p>
+<p> <code>git merge</code>命令用于合并指定分支到当前分支。合并后，再查看readme.txt的内容，就可以看到，和dev分支的最新提交是完全一样的。</p>
+<blockquote>
+<p>注意到上面的Fast-forward信息，Git告诉我们，这次合并是“快进模式”，也就是直接把master指向dev的当前提交，所以合并速度非常快。当然，也不是每次合并都能Fast-forward，我们后面会讲其他方式的合并。 </p>
+</blockquote>
+<p> 合并完成后，就可以放心地删除dev分支了：<br> <code>git branch -d dev</code></p>
+<p> 删除后，查看branch，就只剩下master分支了：<br> <code>git branch</code></p>
+<p> 因为创建、合并和删除分支非常快，所以Git鼓励你使用分支完成某个任务，合并后再删掉分支，这和直接在master分支上工作效果是一样的，但过程更安全。</p>
+</li>
+</ol>
+<h3 id="gitignore"><a href="#gitignore" class="headerlink" title=".gitignore"></a>.gitignore</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 此为注释 – 将被 Git 忽略</span></span><br><span class="line">*.a       ``<span class="comment"># 忽略所有 .a 结尾的文件</span></span><br><span class="line">!lib.a    ``<span class="comment"># 但 lib.a 除外</span></span><br><span class="line">/TODO`     `<span class="comment"># 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO</span></span><br><span class="line">build/    ``<span class="comment"># 忽略 build/ 目录下的所有文件</span></span><br><span class="line">doc/*.txt ``<span class="comment"># 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt</span></span><br></pre></td></tr></table></figure>
+
+<p>• 所有空行或者以 # 开头的行都会被 Git 忽略。 • 可以使用标准的 glob 模式匹配。<br> • 匹配模式可以以(/)开头防止递归。<br> • 匹配模式可以以(/)结尾指定目录。 </p>
+<p>• 要忽略指定模式以外的文件或目录，可以在模式前加上惊叹号(!)取反。</p>
+<p>所谓的 glob 模式是指 shell 所使用的简化了的正则表达式。 星号(*)匹配零个或多个任意字符;[abc] 匹配 任何一个列在方括号中的字符(这个例子要么匹配一个 a，要么匹配一个 b，要么匹配一个 c);问号(?)只匹配一个任意字符;如果在方括号中使用短划线分隔两个字符，表示所有在这两个字符范围内的都可以匹配 (比如 [0-9] 表示匹配所有 0 到 9 的数字)。 使用两个星号(<em>) 表示匹配任意中间目录，比如 a/*</em>/z 可以匹 配 a/z , a/b/z 或 a/b/c/z 等。 </p>
+<p>!!!使更改后的gitignore生效：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git rm -r --cached .  <span class="comment">#清除缓存</span></span><br><span class="line">git add . <span class="comment">#重新trace file</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="提交规范"><a href="#提交规范" class="headerlink" title="提交规范"></a>提交规范</h3><p>一般个人开发时可随意遵守，但对于团队感觉还是适用的。</p>
+<p><a href="https://juejin.im/post/5d0b3f8c6fb9a07ec07fc5d0">使用插件可访问</a></p>
+<p>基本commit样式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="built_in">type</span>&gt;(&lt;scope&gt;): &lt;subject&gt;</span><br><span class="line">&lt;BLANK LINE&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;BLANK LINE&gt;</span><br><span class="line">&lt;footer&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="1-type"><a href="#1-type" class="headerlink" title="1.type"></a>1.type</h4><p><code>type</code>为必填项，用于指定commit的类型，约定了<code>feat</code>、<code>fix</code>两个<code>主要type</code>，以及docs、style、build、refactor、revert五个<code>特殊type</code>，<code>其余type</code>暂不使用。</p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># 主要type</span></span><br><span class="line"><span class="symbol">feat:</span>     增加新功能</span><br><span class="line"><span class="symbol">fix:</span>      修复bug</span><br><span class="line"></span><br><span class="line"><span class="meta"># 特殊type</span></span><br><span class="line"><span class="symbol">docs:</span>     只改动了文档相关的内容</span><br><span class="line"><span class="symbol">style:</span>    不影响代码含义的改动，例如去掉空格、改变缩进、增删分号</span><br><span class="line"><span class="symbol">build:</span>    构造工具的或者外部依赖的改动，例如webpack，npm</span><br><span class="line"><span class="symbol">refactor:</span> 代码重构时使用</span><br><span class="line"><span class="symbol">revert:</span>   执行git revert打印的message</span><br><span class="line"></span><br><span class="line"><span class="meta"># 暂不使用type</span></span><br><span class="line"><span class="symbol">test:</span>     添加测试或者修改现有测试</span><br><span class="line"><span class="symbol">perf:</span>     提高性能的改动</span><br><span class="line"><span class="symbol">ci:</span>       与CI（持续集成服务）有关的改动</span><br><span class="line"><span class="symbol">chore:</span>    不修改src或者test的其余修改，例如构建过程或辅助工具的变动</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>当一次改动包括<code>主要type</code>与<code>特殊type</code>时，统一采用<code>主要type</code>。</p>
+<h4 id="2-scope"><a href="#2-scope" class="headerlink" title="2.scope"></a>2.scope</h4><p><code>scope</code>也为必填项，用于描述改动的范围，格式为项目名/模块名，例如： <code>node-pc/common</code> <code>rrd-h5/activity</code>，而<code>we-sdk</code>不需指定模块名。如果一次commit修改多个模块，建议拆分成多次commit，以便更好追踪和维护。</p>
+<h4 id="3-body"><a href="#3-body" class="headerlink" title="3.body"></a>3.body</h4><p><code>body</code>填写详细描述，主要描述<code>改动之前的情况</code>及<code>修改动机</code>，对于小的修改不作要求，但是重大需求、更新等必须添加body来作说明。</p>
+<h4 id="4-break-changes"><a href="#4-break-changes" class="headerlink" title="4.break changes"></a>4.break changes</h4><p><code>break changes</code>指明是否产生了破坏性修改，涉及break changes的改动必须指明该项，类似版本升级、接口参数减少、接口删除、迁移等。</p>
+<h4 id="5-affect-issues"><a href="#5-affect-issues" class="headerlink" title="5.affect issues"></a>5.affect issues</h4><p><code>affect issues</code>指明是否影响了某个问题。例如我们使用jira时，我们在<code>commit message</code>中可以填写其影响的<code>JIRA_ID</code>，若要开启该功能需要先打通<code>jira</code>与<code>gitlab</code>。参考文档：<a href="https://docs.gitlab.com/ee/user/project/integrations/jira.html">docs.gitlab.com/ee/user/pro…</a></p>
+<p>填写方式例如：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">re</span> <span class="comment">#JIRA_ID</span></span><br><span class="line">fix <span class="comment">#JIRA_ID</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><ul>
+<li><p>完整的commit message示例</p>
+<p><img src="https://cdn.jsdelivr.net/gh/radoapx/rad-figure-bed/PicGo/blogs/linux-softs/20200514215156.png" alt=""></p>
+</li>
+<li><p>相应的git log</p>
+<p><img src="https://cdn.jsdelivr.net/gh/radoapx/rad-figure-bed/PicGo/blogs/linux-softs/20200514215207.png" alt=""></p>
+</li>
+</ul>
+<h2 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h2><p>重要！进行用户相关操作后记得刷新权限！！！<code>FLUSH PRIVILEGES;</code></p>
+<ul>
+<li><p>列出所有数据库</p>
+<p><code>show databases;</code></p>
+</li>
+<li><p>删除数据库</p>
+<p><code>drop database name;</code></p>
+</li>
+<li><p>新建数据库</p>
+<p><code>create database name;</code></p>
+</li>
+<li><p>查看用户基本资料</p>
+<p><code>SELECT DISTINCT CONCAT(&#39;User: &#39;&#39;&#39;,user,&#39;&#39;&#39;@&#39;&#39;&#39;,host,&#39;&#39;&#39;;&#39;) AS query FROM mysql.user;</code></p>
+</li>
+<li><p>新建用户</p>
+<p><code>create user movie_user@% identified by&#39;123456&#39;;</code></p>
+<blockquote>
+<p>@后面的参数是指该用户可以登陆的ip地址，”%”是可以在任意ip登陆。</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>用户名@IP地址         用户只能该IP下才能访问<br>用户名@192.168.1.%   用户只能在改IP段下才能访问(通配符%表示任意)<br>用户名@%             用户可以再任意IP下访问(默认IP地址为%)</p>
+</blockquote>
+<ul>
+<li><p>删除用户</p>
+<p><code>drop user &#39;用户名&#39;@&#39;IP地址&#39;;</code></p>
+</li>
+<li><p>修改用户及密码</p>
+<p><code>rename user &#39;用户名&#39;@&#39;IP地址&#39; to &#39;新用户名&#39;@&#39;IP地址&#39;;</code></p>
+<p><code>set password for &#39;用户名&#39;@&#39;IP地址&#39; = Password(&#39;新密码&#39;);</code></p>
+</li>
+<li><p>查看权限</p>
+<p><code>show grants for &#39;用户&#39;@&#39;IP地址&#39;;</code></p>
+</li>
+<li><p>赋予权限</p>
+<p><code>GRANT ALL PRIVILEGES ON mall.* TO &#39;test&#39;@&#39;%&#39;</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">grant 权限 on 数据库.表 to '用户'@'IP地址';</span><br><span class="line"> </span><br><span class="line">//all privileges  除grant外的所有权限</span><br><span class="line">select          仅查权限</span><br><span class="line">select,insert   查和插入权限</span><br><span class="line">...</span><br><span class="line">usage                   无访问权限</span><br><span class="line">alter                   使用alter table</span><br><span class="line">alter routine           使用alter procedure和drop procedure</span><br><span class="line">create                  使用create table</span><br><span class="line">create routine          使用create procedure</span><br><span class="line">create temporary tables 使用create temporary tables</span><br><span class="line">create user             使用create user、drop user、rename user和revoke all privileges</span><br><span class="line">create view             使用create view</span><br><span class="line">delete                  使用delete</span><br><span class="line">drop                    使用drop table</span><br><span class="line">execute                 使用call和存储过程</span><br><span class="line">file                    使用select into outfile 和 load data infile</span><br><span class="line">grant option            使用grant 和 revoke</span><br><span class="line">index                   使用index</span><br><span class="line">insert                  使用insert</span><br><span class="line">lock tables             使用lock table</span><br><span class="line">process                 使用show full processlist</span><br><span class="line">select                  使用select</span><br><span class="line">show databases          使用show databases</span><br><span class="line">show view               使用show view</span><br><span class="line">update                  使用update</span><br><span class="line">reload                  使用flush</span><br><span class="line">shutdown                使用mysqladmin shutdown(关闭MySQL)</span><br><span class="line">super                   使用change master、kill、logs、purge、master和set global。还允许mysqladmin????调试登陆</span><br><span class="line">replication client      服务器位置的访问</span><br><span class="line">replication slave       由复制从属使用</span><br><span class="line">================================================= </span><br><span class="line">数据库名.*           数据库中的所有</span><br><span class="line">数据库名.表             指定数据库中的某张表</span><br><span class="line">数据库名.存储过程       指定数据库中的存储过程</span><br><span class="line">*.*                    所有数据库</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除权限</p>
+<p><code>revoke 权限 on 数据库.表 from &#39;用户&#39;@&#39;IP地址&#39;;</code></p>
+</li>
+</ul>
+<h2 id="RPM"><a href="#RPM" class="headerlink" title="RPM"></a>RPM</h2><h4 id="RPM概述"><a href="#RPM概述" class="headerlink" title="RPM概述"></a>RPM概述</h4><p>RPM（RedHat Package Manager），RedHat软件包管理工具，类似windows里面的setup.exe是Linux这系列操作系统里面的打包安装工具，它虽然是RedHat的标志，但理念是通用的。</p>
+<p>RPM包的名称格式:</p>
+<p>Apache-1.3.23-11.i386.rpm</p>
+<ul>
+<li><p>“apache” 软件名称</p>
+</li>
+<li><p>“1.3.23-11”软件的版本号，主版本和此版本</p>
+</li>
+<li><p>“i386”是软件所运行的硬件平台，Intel 32位微处理器的统称</p>
+</li>
+<li><p>“rpm”文件扩展名，代表RPM包</p>
+</li>
+</ul>
+<h4 id="RPM查询命令（rpm-qa）"><a href="#RPM查询命令（rpm-qa）" class="headerlink" title="RPM查询命令（rpm -qa）"></a>RPM查询命令（rpm -qa）</h4><h5 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rpm -qa				（功能描述：查询所安装的所有rpm软件包）</span><br></pre></td></tr></table></figure>
+
+<h5 id="经验技巧"><a href="#经验技巧" class="headerlink" title="经验技巧"></a>经验技巧</h5><p>由于软件包比较多，一般都会采取过滤。<strong>rpm -qa | grep rpm</strong>软件包</p>
+<h5 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h5><p>（1）查询firefox软件安装情况</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 Packages]<span class="comment"># rpm -qa |grep firefox </span></span><br><span class="line">-------------</span><br><span class="line">firefox-45.0.1-1.el6.centos.x86_64</span><br></pre></td></tr></table></figure>
+
+<h4 id="RPM卸载命令（rpm-e）"><a href="#RPM卸载命令（rpm-e）" class="headerlink" title="RPM卸载命令（rpm -e）"></a>RPM卸载命令（rpm -e）</h4><h5 id="基本语法-1"><a href="#基本语法-1" class="headerlink" title="基本语法"></a>基本语法</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> $ rpm -e RPM软件包   </span><br><span class="line"></span><br><span class="line">$ rpm -e --nodeps 软件包</span><br></pre></td></tr></table></figure>
+
+<h5 id="选项说明"><a href="#选项说明" class="headerlink" title="选项说明"></a>选项说明</h5><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-e</td>
+<td>卸载软件包</td>
+</tr>
+<tr>
+<td>–nodeps</td>
+<td>卸载软件时，不检查依赖。这样的话，那些使用该软件包的软件在此之后可能就不能正常工作了。</td>
+</tr>
+</tbody></table>
+<h5 id="案例-1"><a href="#案例-1" class="headerlink" title="案例"></a>案例</h5><p>（1）卸载firefox软件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 Packages]<span class="comment"># rpm -e firefox</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="RPM安装命令（rpm-ivh）"><a href="#RPM安装命令（rpm-ivh）" class="headerlink" title="RPM安装命令（rpm -ivh）"></a>RPM安装命令（rpm -ivh）</h4><h5 id="基本语法-2"><a href="#基本语法-2" class="headerlink" title="基本语法"></a>基本语法</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rpm -ivh RPM包全名</span><br></pre></td></tr></table></figure>
+
+<h5 id="选项说明-1"><a href="#选项说明-1" class="headerlink" title="选项说明"></a>选项说明</h5><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-i</td>
+<td>-i=install，安装</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>-v=verbose，显示详细信息</td>
+</tr>
+<tr>
+<td>-h</td>
+<td>-h=hash，进度条</td>
+</tr>
+<tr>
+<td>–nodeps</td>
+<td>–nodeps，不检测依赖进度</td>
+</tr>
+</tbody></table>
+<h5 id="案例-2"><a href="#案例-2" class="headerlink" title="案例"></a>案例</h5><p>（1）安装firefox软件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 Packages]<span class="comment"># pwd</span></span><br><span class="line">-------------------------------</span><br><span class="line">/media/CentOS_6.8_Final/Packages</span><br><span class="line"></span><br><span class="line">[root@hadoop101 Packages]<span class="comment"># rpm -ivh firefox-45.0.1-1.el6.centos.x86_64.rpm </span></span><br><span class="line">---------------------------------------</span><br><span class="line">warning: firefox-45.0.1-1.el6.centos.x86_64.rpm: Header V3 RSA/SHA1 Signature, key ID c105b9de: NOKEY</span><br><span class="line">Preparing...                <span class="comment">########################################### [100%]</span></span><br><span class="line">   1:firefox                <span class="comment">########################################### [100%]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="yum"><a href="#yum" class="headerlink" title="yum"></a>yum</h2><p>YUM（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及CentOS中的Shell前端软件包管理器。基于RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装，</p>
+<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum [options] [command] [package ...]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>options：</strong>可选，选项包括-h（帮助），-y（当安装过程提示选择全部为”yes”），-q（不显示安装的过程）等等。</li>
+<li><strong>command：</strong>要进行的操作。</li>
+<li><strong>package</strong>：操作的对象。</li>
+</ul>
+<h4 id="command"><a href="#command" class="headerlink" title="command"></a>command</h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>install</td>
+<td>安装rpm软件包</td>
+</tr>
+<tr>
+<td>update</td>
+<td>更新rpm软件包</td>
+</tr>
+<tr>
+<td>check-update</td>
+<td>检查是否有可用的更新rpm软件包</td>
+</tr>
+<tr>
+<td>remove</td>
+<td>删除指定的rpm软件包</td>
+</tr>
+<tr>
+<td>list</td>
+<td>显示软件包信息</td>
+</tr>
+<tr>
+<td>clean</td>
+<td>清理yum过期的缓存</td>
+</tr>
+<tr>
+<td>deplist</td>
+<td>显示yum软件包的所有依赖关系</td>
+</tr>
+</tbody></table>
+<hr>
+<ul>
+<li>列出所有可更新的软件清单命令：yum check-update</li>
+</ul>
+<ul>
+<li>更新所有软件命令：yum update</li>
+<li>仅安装指定的软件命令：yum install <package_name></li>
+<li>仅更新指定的软件命令：yum update <package_name></li>
+<li>列出所有可安裝的软件清单命令：yum list</li>
+<li>删除软件包命令：yum remove <package_name></li>
+<li>查找软件包 命令：yum search <keyword></li>
+<li>清除缓存命令:<ul>
+<li>yum clean packages: 清除缓存目录下的软件包</li>
+<li>yum clean headers: 清除缓存目录下的 headers</li>
+<li>yum clean oldheaders: 清除缓存目录下旧的 headers</li>
+<li>yum clean, yum clean all (= yum clean packages; yum clean oldheaders) :清除缓存目录下的软件包及旧的headers</li>
+</ul>
+</li>
+</ul>
+<h2 id="brew"><a href="#brew" class="headerlink" title="brew"></a>brew</h2><p>brew 是 Mac 下的一个包管理工具，类似于 centos 下的 yum，可以很方便地进行安装/卸载/更新各种软件包，例如：nodejs, elasticsearch, kibana, mysql, mongodb 等等，可以用来快速搭建各种本地环境，程序员必备工具</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;usr&#x2F;bin&#x2F;ruby -e &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h4><ul>
+<li><p>安装/卸载/更新<br>以 nodejs 为例，执行下面命令即可，安装目录在 /usr/local/Cellar</p>
+ <figure class="highlight plain"><figcaption><span>install nodejs```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 如果需要更新或卸载</span><br></pre></td></tr></table></figure>
+<p>brew upgrade nodejs<br>brew remove nodejs</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 其他命令</span><br><span class="line"></span><br><span class="line">```<span class="keyword">bash</span></span><br><span class="line"><span class="keyword">brew </span>list                   <span class="comment"># 列出当前安装的软件</span></span><br><span class="line"><span class="keyword">brew </span>search nodejs          <span class="comment"># 查询与 nodejs 相关的可用软件</span></span><br><span class="line"><span class="keyword">brew </span>info nodejs            <span class="comment"># 查询 nodejs 的安装信息</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果需要指定版本，可以在 brew search 查看有没有需要的版本，在 @ 后面指定版本号，例如 brew install <a href="mailto:thrift@0.9">thrift@0.9</a></p>
+</li>
+</ul>
+<h4 id="brew-services"><a href="#brew-services" class="headerlink" title="brew services"></a>brew services</h4><ul>
+<li>brew services 是一个非常强大的工具，可以用来管理各种服务的启停，有点像 linux 里面的 services，非常方便，以 elasticsearch 为例</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">brew install elasticsearch          <span class="comment"># 安装 elasticsearch</span></span><br><span class="line">brew services start elasticsearch   <span class="comment"># 启动 elasticsearch</span></span><br><span class="line">brew services stop elasticsearch    <span class="comment"># 停止 elasticsearch</span></span><br><span class="line">brew services restart elasticsearch <span class="comment"># 重启 elasticsearch</span></span><br><span class="line">brew services list                  <span class="comment"># 列出当前的状态</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="brew-services-服务相关配置以及日志路径"><a href="#brew-services-服务相关配置以及日志路径" class="headerlink" title="brew services 服务相关配置以及日志路径"></a>brew services 服务相关配置以及日志路径</h5><p>配置路径：/usr/local/etc/<br>日志路径：/usr/local/var/log</p>
+<h2 id="systemctl"><a href="#systemctl" class="headerlink" title="systemctl"></a>systemctl</h2><p>从CentOS 7.x开始，CentOS开始使用systemd服务来代替daemon，</p>
+<p>原来管理系统启动和管理系统服务的相关命令全部由systemctl命令来代替。</p>
+<h4 id="原来的-service-命令与-systemctl-命令对比"><a href="#原来的-service-命令与-systemctl-命令对比" class="headerlink" title="原来的 service 命令与 systemctl 命令对比"></a>原来的 service 命令与 systemctl 命令对比</h4><table>
+<thead>
+<tr>
+<th>daemon命令</th>
+<th>systemctl命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>service [服务] start</td>
+<td>systemctl start [unit type]</td>
+<td>启动服务</td>
+</tr>
+<tr>
+<td>service [服务] stop</td>
+<td>systemctl stop [unit type]</td>
+<td>停止服务</td>
+</tr>
+<tr>
+<td>service [服务] restart</td>
+<td>systemctl restart [unit type]</td>
+<td>重启服务</td>
+</tr>
+</tbody></table>
+<h4 id="此外还是二个systemctl参数没有与service命令参数对应"><a href="#此外还是二个systemctl参数没有与service命令参数对应" class="headerlink" title="此外还是二个systemctl参数没有与service命令参数对应"></a><strong>此外还是二个systemctl参数没有与service命令参数对应</strong></h4><ul>
+<li>status：参数来查看服务运行情况</li>
+<li>reload：重新加载服务，加载更新后的配置文件（并不是所有服务都支持这个参数，比如network.service）</li>
+</ul>
+<p>应用举例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#启动网络服务</span></span><br><span class="line">systemctl start network.service</span><br><span class="line"></span><br><span class="line"><span class="comment">#停止网络服务</span></span><br><span class="line">systemctl stop network.service</span><br><span class="line"></span><br><span class="line"><span class="comment">#重启网络服务</span></span><br><span class="line">systemctl restart network.service</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看网络服务状态</span></span><br><span class="line">systemctl status network.serivce</span><br></pre></td></tr></table></figure>
+
+<h4 id="原来的chkconfig-命令与-systemctl-命令对比"><a href="#原来的chkconfig-命令与-systemctl-命令对比" class="headerlink" title="原来的chkconfig 命令与 systemctl 命令对比"></a>原来的chkconfig 命令与 systemctl 命令对比</h4><h4 id="设置开机启动-不启动"><a href="#设置开机启动-不启动" class="headerlink" title="设置开机启动/不启动"></a>设置开机启动/不启动</h4><table>
+<thead>
+<tr>
+<th>daemon命令</th>
+<th>systemctl命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>chkconfig [服务] on</td>
+<td>systemctl enable [unit type]</td>
+<td>设置服务开机启动</td>
+</tr>
+<tr>
+<td>chkconfig [服务] off</td>
+<td>systemctl disable [unit type]</td>
+<td>设备服务禁止开机启动</td>
+</tr>
+</tbody></table>
+<p>应用举例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#停止cup电源管理服务</span></span><br><span class="line">systemctl stop cups.service</span><br><span class="line"></span><br><span class="line"><span class="comment">#禁止cups服务开机启动</span></span><br><span class="line">systemctl <span class="built_in">disable</span> cups.service</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看cups服务状态</span></span><br><span class="line">systemctl status cups.service</span><br><span class="line"></span><br><span class="line"><span class="comment">#重新设置cups服务开机启动</span></span><br><span class="line">systemctl <span class="built_in">enable</span> cups.service</span><br></pre></td></tr></table></figure>
+
+<h4 id="查看系统上上所有的服务"><a href="#查看系统上上所有的服务" class="headerlink" title="查看系统上上所有的服务"></a>查看系统上上所有的服务</h4><p>命令格式：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl [<span class="built_in">command</span>] [–<span class="built_in">type</span>=TYPE] [–all]</span><br></pre></td></tr></table></figure>
+
+<p>参数详解：</p>
+<p>command – list-units：依据unit列出所有启动的unit。加上 –all 才会列出没启动的unit; – list-unit-files:依据/usr/lib/systemd/system/ 内的启动文件，列出启动文件列表</p>
+<p>–type=TYPE – 为unit type, 主要有service, socket, target</p>
+<p>应用举例：</p>
+<table>
+<thead>
+<tr>
+<th>systemctl命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>systemctl</td>
+<td>列出所有的系统服务</td>
+</tr>
+<tr>
+<td>systemctl list-units</td>
+<td>列出所有启动unit</td>
+</tr>
+<tr>
+<td>systemctl list-unit-files</td>
+<td>列出所有启动文件</td>
+</tr>
+<tr>
+<td>systemctl list-units –type=service –all</td>
+<td>列出所有service类型的unit</td>
+</tr>
+<tr>
+<td>systemctl list-units –type=service –all grep cpu</td>
+<td>列出 cpu电源管理机制的服务</td>
+</tr>
+<tr>
+<td>systemctl list-units –type=target –all</td>
+<td>列出所有target</td>
+</tr>
+</tbody></table>
+<h4 id="systemctl特殊的用法"><a href="#systemctl特殊的用法" class="headerlink" title="systemctl特殊的用法"></a>systemctl特殊的用法</h4><table>
+<thead>
+<tr>
+<th>systemctl命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>systemctl is-active [unit type]</td>
+<td>查看服务是否运行</td>
+</tr>
+<tr>
+<td>systemctl is-enable [unit type]</td>
+<td>查看服务是否设置为开机启动</td>
+</tr>
+<tr>
+<td>systemctl mask [unit type]</td>
+<td>注销指定服务</td>
+</tr>
+<tr>
+<td>systemctl unmask [unit type]</td>
+<td>取消注销指定服务</td>
+</tr>
+</tbody></table>
+<p>应用举例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看网络服务是否启动</span></span><br><span class="line">systemctl is-active network.service</span><br><span class="line"></span><br><span class="line"><span class="comment">#检查网络服务是否设置为开机启动</span></span><br><span class="line">systemctl is-enable network.service</span><br><span class="line"></span><br><span class="line"><span class="comment">#停止cups服务</span></span><br><span class="line">systemctl stop cups.service</span><br><span class="line"></span><br><span class="line"><span class="comment">#注销cups服务</span></span><br><span class="line">systemctl mask cups.service</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看cups服务状态</span></span><br><span class="line">systemctl status cups.service</span><br><span class="line"></span><br><span class="line"><span class="comment">#取消注销cups服务</span></span><br><span class="line">systemctl unmask cups.service</span><br></pre></td></tr></table></figure>
+
+</div><div class="article-tags size-small is-uppercase mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Linux/">Linux</a></div><div class="sharethis-inline-share-buttons"></div><script src="https://platform-api.sharethis.com/js/sharethis.js#property=5e987269931c3700123db905&amp;product=inline-share-buttons" defer></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button is-info donate"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/radoapx/rad-figure-bed/PicGo/blog/donates/20200416220326.JPG" alt="支付宝"></span></a><a class="button is-warning donate" onclick="document.getElementById(&#039;paypal-donate-form&#039;).submit()"><span class="icon is-small"><i class="fab fa-paypal"></i></span><span>Paypal</span></a><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" rel="noopener" id="paypal-donate-form"><input type="hidden" name="cmd" value="_donations"><input type="hidden" name="business" value="845225343@qq.com"><input type="hidden" name="currency_code" value="USD"></form><a class="button is-success donate"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/radoapx/rad-figure-bed/PicGo/blog/donates/20200416220459.JPG" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/05/16/Linux&amp;Mac/linux&amp;mac/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Linux 命令总结</span></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="is-rounded" src="/img/avatar.jpeg" alt="radoapx"></figure><p class="title is-size-4 is-block line-height-inherit">radoapx</p><p class="is-size-6 is-block">代码&amp;生活</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Njtech,China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">17</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">2</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">16</p></a></div></div></nav><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/radoapx"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/keep_escalating"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Gmail" href="mailto:radoapx@gmail.com"><i class="fas fa-envelope"></i></a></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content size-small"><p><time dateTime="2020-05-16T06:45:05.029Z">2020-05-16</time></p><p class="title is-6"><a class="link-muted" href="/2020/05/16/%E8%BF%90%E7%BB%B4/PM2/">PM2</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-05-16T06:45:05.028Z">2020-05-16</time></p><p class="title is-6"><a class="link-muted" href="/2020/05/16/%E8%BF%90%E7%BB%B4/Nginx/">Nginx</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-05-16T06:45:05.027Z">2020-05-16</time></p><p class="title is-6"><a class="link-muted" href="/2020/05/16/%E5%A4%A7%E5%89%8D%E7%AB%AF/%E8%B7%A8%E5%9F%9F/">跨域相关</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-05-16T06:45:05.026Z">2020-05-16</time></p><p class="title is-6"><a class="link-muted" href="/2020/05/16/%E5%A4%A7%E5%89%8D%E7%AB%AF/webpack/">Webpack 笔记</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-05-16T06:45:05.024Z">2020-05-16</time></p><p class="title is-6"><a class="link-muted" href="/2020/05/16/%E5%A4%A7%E5%89%8D%E7%AB%AF/vue/">Vue 笔记</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile is-mobile" href="https://www.apple.com.cn/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Apple</span></span><span class="level-right"><span class="level-item tag">www.apple.com.cn</span></span></a></li><li><a class="level is-mobile is-mobile" href="http://acm.hdu.edu.cn/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">HDU OJ</span></span><span class="level-right"><span class="level-item tag">acm.hdu.edu.cn</span></span></a></li><li><a class="level is-mobile is-mobile" href="https://www.trumangu.fun/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">TrumanGu</span></span><span class="level-right"><span class="level-item tag">www.trumangu.fun</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" id="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="is-flex" href="#git"><span class="mr-2">1</span><span>git</span></a><ul class="menu-list"><li><a class="is-flex" href="#命令"><span class="mr-2">1.1</span><span>命令</span></a><ul class="menu-list"><li><a class="is-flex" href="#用户名设置"><span class="mr-2">1.1.1</span><span>用户名设置</span></a></li><li><a class="is-flex" href="#git-log-查看历史"><span class="mr-2">1.1.2</span><span>git log 查看历史</span></a></li><li><a class="is-flex" href="#git-reflog-reset"><span class="mr-2">1.1.3</span><span>git reflog&amp;#x2F;reset</span></a></li></ul></li><li><a class="is-flex" href="#gitignore"><span class="mr-2">1.2</span><span>.gitignore</span></a></li><li><a class="is-flex" href="#提交规范"><span class="mr-2">1.3</span><span>提交规范</span></a><ul class="menu-list"><li><a class="is-flex" href="#1-type"><span class="mr-2">1.3.1</span><span>1.type</span></a></li><li><a class="is-flex" href="#2-scope"><span class="mr-2">1.3.2</span><span>2.scope</span></a></li><li><a class="is-flex" href="#3-body"><span class="mr-2">1.3.3</span><span>3.body</span></a></li><li><a class="is-flex" href="#4-break-changes"><span class="mr-2">1.3.4</span><span>4.break changes</span></a></li><li><a class="is-flex" href="#5-affect-issues"><span class="mr-2">1.3.5</span><span>5.affect issues</span></a></li><li><a class="is-flex" href="#示例"><span class="mr-2">1.3.6</span><span>示例</span></a></li></ul></li></ul></li><li><a class="is-flex" href="#Mysql"><span class="mr-2">2</span><span>Mysql</span></a></li><li><a class="is-flex" href="#RPM"><span class="mr-2">3</span><span>RPM</span></a><ul class="menu-list"><ul class="menu-list"><li><a class="is-flex" href="#RPM概述"><span class="mr-2">3.1.1</span><span>RPM概述</span></a></li><li><a class="is-flex" href="#案例"><span class="mr-2">3.1.2</span><span>案例</span></a></li><li><a class="is-flex" href="#案例-1"><span class="mr-2">3.1.3</span><span>案例</span></a></li><li><a class="is-flex" href="#案例-2"><span class="mr-2">3.1.4</span><span>案例</span></a></li></ul></ul></li><li><a class="is-flex" href="#yum"><span class="mr-2">4</span><span>yum</span></a><ul class="menu-list"><ul class="menu-list"><li><a class="is-flex" href="#语法"><span class="mr-2">4.1.1</span><span>语法</span></a></li><li><a class="is-flex" href="#command"><span class="mr-2">4.1.2</span><span>command</span></a></li></ul></ul></li><li><a class="is-flex" href="#brew"><span class="mr-2">5</span><span>brew</span></a><ul class="menu-list"><ul class="menu-list"><li><a class="is-flex" href="#安装"><span class="mr-2">5.1.1</span><span>安装</span></a></li><li><a class="is-flex" href="#基本用法"><span class="mr-2">5.1.2</span><span>基本用法</span></a></li><li><a class="is-flex" href="#brew-services-服务相关配置以及日志路径"><span class="mr-2">5.1.3</span><span>brew services 服务相关配置以及日志路径</span></a></li></ul></ul></li><li><a class="is-flex" href="#systemctl"><span class="mr-2">6</span><span>systemctl</span></a><ul class="menu-list"><ul class="menu-list"><li><a class="is-flex" href="#原来的-service-命令与-systemctl-命令对比"><span class="mr-2">6.1.1</span><span>原来的 service 命令与 systemctl 命令对比</span></a></li><li><a class="is-flex" href="#此外还是二个systemctl参数没有与service命令参数对应"><span class="mr-2">6.1.2</span><span>此外还是二个systemctl参数没有与service命令参数对应</span></a></li><li><a class="is-flex" href="#原来的chkconfig-命令与-systemctl-命令对比"><span class="mr-2">6.1.3</span><span>原来的chkconfig 命令与 systemctl 命令对比</span></a></li><li><a class="is-flex" href="#设置开机启动-不启动"><span class="mr-2">6.1.4</span><span>设置开机启动&amp;#x2F;不启动</span></a></li><li><a class="is-flex" href="#查看系统上上所有的服务"><span class="mr-2">6.1.5</span><span>查看系统上上所有的服务</span></a></li><li><a class="is-flex" href="#systemctl特殊的用法"><span class="mr-2">6.1.6</span><span>systemctl特殊的用法</span></a></li></ul></ul></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/%E5%8D%9A%E5%AE%A2/"><span class="level-start"><span class="level-item">博客</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%AC%94%E8%AE%B0/"><span class="level-start"><span class="level-item">笔记</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/CSS/"><span class="tag">CSS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Element/"><span class="tag">Element</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML/"><span class="tag">HTML</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTTP/"><span class="tag">HTTP</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/JavaScript/"><span class="tag">JavaScript</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Nginx/"><span class="tag">Nginx</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PM2/"><span class="tag">PM2</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Vue/"><span class="tag">Vue</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/WebSocket/"><span class="tag">WebSocket</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/node/"><span class="tag">node</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/webpack/"><span class="tag">webpack</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%A7%E5%89%8D%E7%AB%AF/"><span class="tag">大前端</span><span class="tag is-grey-lightest">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"><span class="tag">正则表达式</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%B7%A8%E5%9F%9F/"><span class="tag">跨域</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo%201000.png" alt="Radoapx&#039;s Zone" height="28"></a><p class="size-small"><span>&copy; 2020 Radoapx</span>  Surreptitious <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="GitHub" href="https://github.com/radoapx"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            site: {
+                url: 'http://yoursite.com',
+                external_link: {"enable":true,"exclude":[]}
+            },
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

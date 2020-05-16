@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.0"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>JavaScript - Radoapx&#039;s Zone</title><meta description="JavaScript"><meta property="og:type" content="blog"><meta property="og:title" content="JavaScript"><meta property="og:url" content="http://yoursite.com/"><meta property="og:site_name" content="Radoapx&#039;s Zone"><meta property="og:description" content="JavaScript"><meta property="og:locale" content="zh_CN"><meta property="article:published_time" content="2020-05-16T06:45:05.023Z"><meta property="article:modified_time" content="2020-05-16T06:45:05.023Z"><meta property="article:author" content="Radoapx"><meta property="article:tag" content="大前端"><meta property="article:tag" content="JavaScript"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="http://yoursite.com/images/JavaScript.assets/image-20200309213734606.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com/2020/05/16/%E5%A4%A7%E5%89%8D%E7%AB%AF/JavaScript/"},"headline":"Radoapx's Zone","image":["http://yoursite.com/images/JavaScript.assets/image-20200309213734606.png","http://yoursite.com/images/JavaScript.assets/promises.png","http://yoursite.com/images/JavaScript.assets/640.png","http://yoursite.com/images/JavaScript.assets/640-20200402222040514.png","http://yoursite.com/images/JavaScript.assets/640-20200402222340611.png","http://yoursite.com/images/JavaScript.assets/image-20200402223627057.png","http://yoursite.com/images/JavaScript.assets/image-20200402224016596.png","http://yoursite.com/images/JavaScript.assets/image-20200402224028075.png","http://yoursite.com/images/JavaScript.assets/image-20200402224502960.png"],"datePublished":"2020-05-16T06:45:05.023Z","dateModified":"2020-05-16T06:45:05.023Z","author":{"@type":"Person","name":"Radoapx"},"description":"JavaScript"}</script><link rel="canonical" href="http://yoursite.com/2020/05/16/%E5%A4%A7%E5%89%8D%E7%AB%AF/JavaScript/"><link rel="icon" href="/img/favicon.svg"><script src="/live2d-widget/autoload.js"></script><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><script>var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?0b3fb888f3a355444b0a19c06a5721bf";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();</script><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo%201000.png" alt="Radoapx&#039;s Zone" height="58"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/archives">时间轴</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="https://google.com">工坊(building)</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="GitHub" href="https://github.com/radoapx"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-05-16T06:45:05.023Z" title="2020-05-16T06:45:05.023Z">2020-05-16</time><span class="level-item"><a class="link-muted" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></span><span class="level-item">1 小时 读完 (大约 10239 个字)</span><span class="level-item" id="busuanzi_container_page_pv"><i class="far fa-eye"></i>&nbsp;&nbsp;<span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">JavaScript</h1><div class="content"><h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><a id="more"></a>
+<h3 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h3><p>百度云网页端倍速 <code>videojs.getPlayers(&quot;html5player_html5_api&quot;).html5player.tech_.setPlaybackRate(2)</code></p>
+<h3 id="Array技巧"><a href="#Array技巧" class="headerlink" title="Array技巧"></a>Array技巧</h3><h4 id="Array-includes-Array-indexOf"><a href="#Array-includes-Array-indexOf" class="headerlink" title="Array.includes Array.indexOf"></a>Array.includes Array.indexOf</h4><p>“如果你要在数组中查找元素，请使用 Array.indexOf”。我记得在学习 JavaScript 的时候，在教材中读到这样的一句话。毫无疑问，这句话是真的！</p>
+<p>MDN 文档写道，Array.indexOf 将“返回第一次出现给定元素的索引”。因此，如果我们稍后要在代码中使用这个返回的索引，那么使用 Array.indexOf 找到索引就对了。</p>
+<p>但是，如果我们只想知道数组是否包含某个值，该怎么办？这似乎是一个是与否的问题，或者说是一个布尔值问题。对于这种情况，我建议使用返回布尔值的 Array.includes。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> characters = [</span><br><span class="line">  <span class="string">'ironman'</span>,</span><br><span class="line">  <span class="string">'black_widow'</span>,</span><br><span class="line">  <span class="string">'hulk'</span>,</span><br><span class="line">  <span class="string">'captain_america'</span>,</span><br><span class="line">  <span class="string">'hulk'</span>,</span><br><span class="line">  <span class="string">'thor'</span>,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(characters.indexOf(<span class="string">'hulk'</span>));</span><br><span class="line"><span class="comment">// 2</span></span><br><span class="line"><span class="built_in">console</span>.log(characters.indexOf(<span class="string">'batman'</span>));</span><br><span class="line"><span class="comment">// -1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(characters.includes(<span class="string">'hulk'</span>));</span><br><span class="line"><span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(characters.includes(<span class="string">'batman'</span>));</span><br><span class="line"><span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Array-some-Array-find"><a href="#Array-some-Array-find" class="headerlink" title="Array.some  Array.find"></a>Array.some  Array.find</h4><p>Array.find 需要一个回调函数作为参数，并返回一个元素。如果我们想要知道数组是否包含某个值，Array.find 是最好的解决方案吗？可能不是，因为它返回的是一个元素值，而不是一个布尔值。</p>
+<p>对于这种情况，我建议使用 Array.some，它返回所需的布尔值。另外，从语义上看，Array.some 表示我们只想知道某个元素是否存在，而不需要得到这个元素</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> characters = [</span><br><span class="line">  &#123; <span class="attr">id</span>: <span class="number">1</span>, <span class="attr">name</span>: <span class="string">'ironman'</span>, <span class="attr">env</span>: <span class="string">'marvel'</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">id</span>: <span class="number">2</span>, <span class="attr">name</span>: <span class="string">'black_widow'</span>, <span class="attr">env</span>: <span class="string">'marvel'</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">id</span>: <span class="number">3</span>, <span class="attr">name</span>: <span class="string">'wonder_woman'</span>, <span class="attr">env</span>: <span class="string">'dc_comics'</span> &#125;,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">hasCharacterFrom</span>(<span class="params">env</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="params">character</span> =&gt;</span> character.env === env;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(characters.find(hasCharacterFrom(<span class="string">'marvel'</span>)));</span><br><span class="line"><span class="comment">// &#123; id: 1, name: 'ironman', env: 'marvel' &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(characters.some(hasCharacterFrom(<span class="string">'marvel'</span>)));</span><br><span class="line"><span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Array-reduce-而不是链接-Array-filter-和-Array-map"><a href="#Array-reduce-而不是链接-Array-filter-和-Array-map" class="headerlink" title="Array.reduce 而不是链接 Array.filter 和 Array.map"></a>Array.reduce 而不是链接 Array.filter 和 Array.map</h4><p>我们遍历了两次数组。第一次过滤数组并创建一个较短的数组，第二次又基于 Array.filter 获得数组创建一个包含新值的数组。为了获得我们想要的新数组，我们使用了两个 Array 方法。每个方法都有自己的回调函数和一个用不到的数组——由 Array.filter 创建的那个数组。</p>
+<p>为了避免这种性能损耗，我的建议是使用 Array.reduce。结果是一样的，代码却更简单！ 我们可以使用 Array.reduce 进行过滤，并将目标元素添加到累加器中。累加器可以是递增的数字、要填充的对象、要连接的字符串或数组。</p>
+<p>在我们的例子中，因为之前使用了 Array.map，所以我建议使用 Array.reduce 将满足条件的数组元素加入到累加器中。在下面的示例中，根据 env 值的具体情况，我们将它添加到累加器中或保持累加器不变。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> characters = [</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">'ironman'</span>, <span class="attr">env</span>: <span class="string">'marvel'</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">'black_widow'</span>, <span class="attr">env</span>: <span class="string">'marvel'</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">'wonder_woman'</span>, <span class="attr">env</span>: <span class="string">'dc_comics'</span> &#125;,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(</span><br><span class="line">  characters</span><br><span class="line">    .filter(<span class="function"><span class="params">character</span> =&gt;</span> character.env === <span class="string">'marvel'</span>)</span><br><span class="line">    .map(<span class="function"><span class="params">character</span> =&gt;</span> <span class="built_in">Object</span>.assign(&#123;&#125;, character, &#123; <span class="attr">alsoSeenIn</span>: [<span class="string">'Avengers'</span>] &#125;))</span><br><span class="line">);</span><br><span class="line"><span class="comment">// [</span></span><br><span class="line"><span class="comment">//   &#123; name: 'ironman', env: 'marvel', alsoSeenIn: ['Avengers'] &#125;,</span></span><br><span class="line"><span class="comment">//   &#123; name: 'black_widow', env: 'marvel', alsoSeenIn: ['Avengers'] &#125;</span></span><br><span class="line"><span class="comment">// ]</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(</span><br><span class="line">  characters</span><br><span class="line">    .reduce(<span class="function">(<span class="params">acc, character</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> character.env === <span class="string">'marvel'</span></span><br><span class="line">        ? acc.concat(<span class="built_in">Object</span>.assign(&#123;&#125;, character, &#123; <span class="attr">alsoSeenIn</span>: [<span class="string">'Avengers'</span>] &#125;))</span><br><span class="line">        : acc;</span><br><span class="line">    &#125;, [])</span><br><span class="line">)</span><br><span class="line"><span class="comment">// [</span></span><br><span class="line"><span class="comment">//   &#123; name: 'ironman', env: 'marvel', alsoSeenIn: ['Avengers'] &#125;,</span></span><br><span class="line"><span class="comment">//   &#123; name: 'black_widow', env: 'marvel', alsoSeenIn: ['Avengers'] &#125;</span></span><br><span class="line"><span class="comment">// ]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Array文档"><a href="#Array文档" class="headerlink" title="Array文档"></a>Array文档</h3><h4 id="Array-join"><a href="#Array-join" class="headerlink" title="Array.join()"></a>Array.join()</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.join([separator])</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> elements = [<span class="string">'Fire'</span>, <span class="string">'Air'</span>, <span class="string">'Water'</span>];</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(elements.join());</span><br><span class="line"><span class="comment">// expected output: "Fire,Air,Water"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(elements.join(<span class="string">''</span>));</span><br><span class="line"><span class="comment">// expected output: "FireAirWater"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(elements.join(<span class="string">'-'</span>));</span><br><span class="line"><span class="comment">// expected output: "Fire-Air-Water"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//&gt; "Fire,Air,Water"</span></span><br><span class="line"><span class="comment">//&gt; "FireAirWater"</span></span><br><span class="line"><span class="comment">//&gt; "Fire-Air-Water"</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h5><ul>
+<li><p><code>separator</code> 可选</p>
+<p>指定一个字符串来分隔数组的每个元素。如果需要，将分隔符转换为字符串。如果缺省该值，数组元素用逗号（<code>,</code>）分隔。如果<code>separator</code>是空字符串(<code>&quot;&quot;</code>)，则所有元素之间都没有任何字符。</p>
+</li>
+</ul>
+<h5 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h5><p>一个所有数组元素连接的字符串。如果 <code>arr.length</code> 为0，则返回空字符串。</p>
+<h5 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h5><p>所有的数组元素被转换成字符串，再用一个分隔符将这些字符串连接起来。</p>
+<p>如果一个元素为 <code>undefined</code> 或 <code>null</code>，它会被转换为空字符串。</p>
+<h4 id="Array-reduce"><a href="#Array-reduce" class="headerlink" title="Array.reduce()"></a>Array.reduce()</h4><p>方法对数组中的每个元素执行一个由您提供的<strong>reducer</strong>函数(升序执行)，将其结果汇总为单个返回值。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue])</span><br></pre></td></tr></table></figure>
+
+<h5 id="参数-1"><a href="#参数-1" class="headerlink" title="参数"></a><strong>参数</strong></h5><ul>
+<li><p><code>callback</code></p>
+<p>执行数组中每个值 (如果没有提供 <code>initialValue则第一个值除外</code>)的函数，包含四个参数：</p>
+<ul>
+<li><p><strong><code>accumulator</code></strong>累计器累计回调的返回值; 它是上一次调用回调时返回的累积值，或<code>initialValue</code>（见于下方）。</p>
+</li>
+<li><p><code>currentValue</code>数组中正在处理的元素。</p>
+</li>
+<li><p><code>index</code> 可选数组中正在处理的当前元素的索引。如果提供<code>initialValue</code>，则起始索引号为0，否则从索引1起始。</p>
+</li>
+<li><p><code>array</code>可选调用<code>reduce()</code>的数组</p>
+</li>
+</ul>
+</li>
+<li><p><code>initialValue</code>可选</p>
+<p>作为第一次调用 <code>callback</code>函数时的第一个参数的值。 如果没有提供初始值，则将使用数组中的第一个元素。 在没有初始值的空数组上调用 reduce 将报错。</p>
+</li>
+</ul>
+<h5 id="返回值-1"><a href="#返回值-1" class="headerlink" title="返回值"></a><strong>返回值</strong></h5><p>函数累计处理的结果</p>
+<h5 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a><strong>描述</strong></h5><p><code>reduce</code>为数组中的每一个元素依次执行<code>callback</code>函数，不包括数组中被删除或从未被赋值的元素，接受四个参数：</p>
+<ul>
+<li><code>accumulator 累计器</code></li>
+<li><code>currentValue 当前值</code></li>
+<li><code>currentIndex 当前索引</code></li>
+<li><code>array 数组</code></li>
+</ul>
+<p>回调函数第一次执行时，<code>accumulator</code> 和<code>currentValue</code>的取值有两种情况：如果调用<code>reduce()</code>时提供了<code>initialValue</code>，<code>accumulator</code>取值为<code>initialValue</code>，<code>currentValue</code>取数组中的第一个值；如果没有提供 <code>initialValue</code>，那么<code>accumulator</code>取数组中的第一个值，<code>currentValue</code>取数组中的第二个值。</p>
+<p><strong>注意：</strong>如果没有提供<code>initialValue</code>，reduce 会从索引1的地方开始执行 callback 方法，跳过第一个索引。如果提供<code>initialValue</code>，从索引0开始。</p>
+<p>如果数组为空且没有提供<code>initialValue</code>，会抛出<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypeError"><code>TypeError</code></a> 。如果数组仅有一个元素（无论位置如何）并且没有提供<code>initialValue</code>， 或者有提供<code>initialValue</code>但是数组为空，那么此唯一值将被返回并且<code>callback</code>不会被执行。</p>
+<h2 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h2><p>使用<code>Proxy</code>，你可以将一只猫伪装成一只老虎。下面大约有6个例子，我希望它们能让你相信，Proxy 提供了强大的 Javascript 元编程。</p>
+<p>尽管它不像其他ES6功能用的普遍，但<code>Proxy</code>有许多用途，包括运算符重载，对象模拟，简洁而灵活的API创建，对象变化事件，甚至Vue 3背后的内部响应系统提供动力。</p>
+<p><code>Proxy</code>用于修改某些操作的默认行为，也可以理解为在目标对象之前架设一层<strong>拦截</strong>，外部所有的访问都必须先通过这层拦截，因此提供了一种机制，可以对外部的访问进行过滤和修改。这个词的原理为代理，在这里可以表示由它来“代理”某些操作，译为“代理器”。</p>
+<p><code>var proxy = new Proxy(target, handler);</code></p>
+<p><code>Proxy</code>对象的所有用法，都是上面的这种形式。不同的只是<code>handle</code>参数的写法。其中<code>new Proxy</code>用来生成<code>Proxy</code>实例，<code>target</code>是表示所要拦截的对象，<code>handle</code>是用来定制拦截行为的对象。</p>
+<p>下面是 Proxy 最简单的例子是，这是一个有陷阱的代理，一个<code>get</code>陷阱，总是返回<code>42</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> target = &#123;    <span class="attr">x</span>: <span class="number">10</span>,    <span class="attr">y</span>: <span class="number">20</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> hanler = &#123;    <span class="attr">get</span>: <span class="function">(<span class="params">obj, prop</span>) =&gt;</span> <span class="number">42</span>&#125;;</span><br><span class="line">target = <span class="keyword">new</span> <span class="built_in">Proxy</span>(target, hanler);</span><br><span class="line">target.x; <span class="comment">//42target.y; //42target.x; // 42</span></span><br></pre></td></tr></table></figure>
+
+<p>结果是一个对象将为任何属性访问操作都返回“42”。这包括<code>target.x</code>，<code>target[&#39;x&#39;]</code>，<code>Reflect.get(target, &#39;x&#39;)</code>等。</p>
+<p>但是，Proxy 陷阱当然不限于属性的读取。它只是十几个不同陷阱中的一个：</p>
+<ul>
+<li>handler.get</li>
+<li>handler.set</li>
+<li>handler.has</li>
+<li>handler.apply</li>
+<li>handler.construct</li>
+<li>handler.ownKeys</li>
+<li>handler.deleteProperty</li>
+<li>handler.defineProperty</li>
+<li>handler.isExtensible</li>
+<li>handler.preventExtensions</li>
+<li>handler.getPrototypeOf</li>
+<li>handler.setPrototypeOf</li>
+<li>handler.getOwnPropertyDescriptor</li>
+</ul>
+<h4 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h4><p><img src="/images/JavaScript.assets/image-20200309213734606.png" alt="image-20200309213734606"></p>
+<h5 id="默认值-“零值”"><a href="#默认值-“零值”" class="headerlink" title="默认值/“零值”"></a><strong>默认值/“零值”</strong></h5><p>在 Go 语言中，有零值的概念，零值是特定于类型的隐式默认结构值。其思想是提供类型安全的默认基元值，或者用gopher的话说，给结构一个有用的零值。</p>
+<p>虽然不同的创建模式支持类似的功能，但Javascript无法用隐式初始值包装对象。Javascript中未设置属性的默认值是<code>undefined</code>。但 Proxy 可以改变这种情况。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> withZeroValue = <span class="function">(<span class="params">target, zeroValue</span>) =&gt;</span>    <span class="keyword">new</span> <span class="built_in">Proxy</span>(target, &#123;        <span class="attr">get</span>: <span class="function">(<span class="params">obj, prop</span>) =&gt;</span> (prop <span class="keyword">in</span> obj ? obj[prop] : zeroValue)    &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>函数<code>withZeroValue</code> 用来包装目标对象。如果设置了属性，则返回属性值。否则，它返回一个默认的<strong>“零值”</strong>。</p>
+<p>从技术上讲，这种方法也不是隐含的，但如果我们扩展<code>withZeroValue</code>，以Boolean (<code>false</code>), Number (<code>0</code>), String (<code>&quot;&quot;</code>), Object (<code>{}</code>)，Array (<code>[]</code>)等对应的零值，则可能是隐含的。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> pos = &#123;    <span class="attr">x</span>: <span class="number">4</span>,    <span class="attr">y</span>: <span class="number">19</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(pos.x, pos.y, pos.z); <span class="comment">// 4, 19, undefined</span></span><br><span class="line">pos = withZeroValue(pos, <span class="number">0</span>);</span><br><span class="line"><span class="built_in">console</span>.log(pos.z, pos.y, pos.z); <span class="comment">// 4, 19, 0</span></span><br></pre></td></tr></table></figure>
+
+<p>此功能可能有用的一个地方是坐标系。绘图库可以基于数据的形状自动支持2D和3D渲染。不是创建两个单独的模型，而是始终将<code>z</code>默认为 <code>0</code> 而不是<code>undefined</code>，这可能是有意义的。</p>
+<h2 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h2><p><strong>Promise</strong> 对象用于表示一个异步操作的最终完成 (或失败), 及其结果值.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> promise1 = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">  setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    resolve(<span class="string">'foo'</span>);</span><br><span class="line">  &#125;, <span class="number">300</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">promise1.then(<span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(value);</span><br><span class="line">  <span class="comment">// expected output: "foo"</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(promise1);</span><br><span class="line"><span class="comment">// expected output: [object Promise]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="构造函数语法"><a href="#构造函数语法" class="headerlink" title="构造函数语法"></a>构造函数语法</h3><p><code>new Promise( function(resolve, reject) {...} /* executor */  );</code></p>
+<p>executor</p>
+<blockquote>
+<p>executor是带有 <code>resolve</code> 和 <code>reject</code> 两个参数的函数 。Promise构造函数执行时立即调用<code>executor</code> 函数， <code>resolve</code> 和 <code>reject</code> 两个函数作为参数传递给<code>executor</code>（executor 函数在Promise构造函数返回所建promise实例对象前被调用）。<code>resolve</code> 和 <code>reject</code> 函数被调用时，分别将promise的状态改为<em>fulfilled（</em>完成）或rejected（失败）。executor 内部通常会执行一些异步操作，一旦异步操作执行完毕(可能成功/失败)，要么调用resolve函数来将promise状态改成<em>fulfilled</em>，要么调用<code>reject</code> 函数将promise的状态改为rejected。如果在executor函数中抛出一个错误，那么该promise 状态为rejected。executor函数的返回值被忽略。</p>
+</blockquote>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p><code>Promise</code> 对象是一个代理对象（代理一个值），被代理的值在Promise对象创建时可能是未知的。它允许你为异步操作的成功和失败分别绑定相应的处理方法（handlers）。 这让异步方法可以像同步方法那样返回值，<strong>但并不是立即返回最终执行结果，而是一个能代表未来出现的结果的promise对象</strong>。</p>
+<p>一个 <code>Promise</code>有以下几种状态:</p>
+<ul>
+<li><em>pending</em>: 初始状态，既不是成功，也不是失败状态。</li>
+<li><em>fulfilled</em>: 意味着操作成功完成。</li>
+<li><em>rejected</em>: 意味着操作失败。</li>
+</ul>
+<p>pending 状态的 Promise 对象可能会变为fulfilled 状态并传递一个值给相应的状态处理方法，也可能变为失败状态（rejected）并传递失败信息。<strong>当其中任一种情况出现时，Promise 对象的 <code>then</code> 方法绑定的处理方法（handlers ）就会被调用</strong>（then方法包含两个参数：onfulfilled 和 onrejected，它们都是 Function 类型。当Promise状态为<em>fulfilled</em>时，调用 then 的 onfulfilled 方法，当Promise状态为<em>rejected</em>时，调用 then 的 onrejected 方法， 所以在异步操作的完成和绑定处理方法之间不存在竞争）。</p>
+<p>因为 <code>Promise.prototype.then</code> 和 <code>Promise.prototype.catch</code> 方法返回promise 对象， 所以它们可以被链式调用。</p>
+<p><img src="/images/JavaScript.assets/promises.png" alt="img"></p>
+<p><strong>不要和惰性求值混淆：</strong> 有一些语言中有惰性求值和延时计算的特性，它们也被称为“promises”，例如Scheme. Javascript中的promise代表一种已经发生的状态， 而且可以通过回调方法链在一起。 如果你想要的是表达式的延时计算，考虑无参数的”<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头方法</a>“: <code>f = () =&gt;</code><em><code>表达式</code></em> 创建惰性求值的表达式<em>，</em>使用 <code>f()</code> 求值。</p>
+<p><strong>注意：</strong> 如果一个promise对象处在fulfilled或rejected状态而不是pending状态，那么它也可以被称为<em>settled<em>状态。你可能也会听到一个术语</em>resolved</em> ，它表示promise对象处于settled状态。关于promise的术语， Domenic Denicola 的 <a href="https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md">States and fates</a> 有更多详情可供参考。</p>
+<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><p><code>Promise.length</code></p>
+<p>length属性，其值总是为 1 (构造器参数的数目).</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/prototype"><code>Promise.prototype</code></a></p>
+<p>表示 <code>Promise</code> 构造器的原型.</p>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ul>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all"><code>Promise.all(iterable)</code></a></p>
+<p>这个方法返回一个新的promise对象，该promise对象在iterable参数对象里所有的promise对象都成功的时候才会触发成功，一旦有任何一个iterable里面的promise对象失败则立即触发该promise对象的失败。这个新的promise对象在触发成功状态以后，会把一个包含iterable里所有promise返回值的数组作为成功回调的返回值，顺序跟iterable的顺序保持一致；如果这个新的promise对象触发了失败状态，它会把iterable里第一个触发失败的promise对象的错误信息作为它的失败错误信息。Promise.all方法常被用于处理多个promise对象的状态集合。（可以参考jQuery.when方法—译者注）</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/race"><code>Promise.race(iterable)</code></a></p>
+<p>当iterable参数里的任意一个子promise被成功或失败后，父promise马上也会用子promise的成功返回值或失败详情作为参数调用父promise绑定的相应句柄，并返回该promise对象。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject"><code>Promise.reject(reason)</code></a></p>
+<p>返回一个状态为失败的Promise对象，并将给定的失败信息传递给对应的处理方法</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve"><code>Promise.resolve(value)</code></a></p>
+<p>返回一个状态由给定value决定的Promise对象。如果该值是thenable(即，带有then方法的对象)，返回的Promise对象的最终状态由then方法执行决定；否则的话(该value为空，基本类型或者不带then方法的对象),返回的Promise对象状态为fulfilled，并且将该value传递给对应的then方法。通常而言，如果你不知道一个值是否是Promise对象，使用Promise.resolve(value) 来返回一个Promise对象,这样就能将该value以Promise对象形式使用。</p>
+</li>
+</ul>
+<h3 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h3><h4 id="属性-1"><a href="#属性-1" class="headerlink" title="属性"></a>属性</h4><ul>
+<li><p><code>Promise.prototype.constructor</code></p>
+<p>返回被创建的实例函数.  默认为 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a> 函数.</p>
+</li>
+</ul>
+<h4 id="方法-1"><a href="#方法-1" class="headerlink" title="方法"></a>方法</h4><ul>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch"><code>Promise.prototype.catch(onRejected)</code></a></p>
+<p>添加一个拒绝(rejection) 回调到当前 promise, 返回一个新的promise。当这个回调函数被调用，新 promise 将以它的返回值来resolve，否则如果当前promise 进入fulfilled状态，则以当前promise的完成结果作为新promise的完成结果.</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then"><code>Promise.prototype.then(onFulfilled, onRejected)</code></a></p>
+<p>添加解决(fulfillment)和拒绝(rejection)回调到当前 promise, 返回一个新的 promise, 将以回调的返回值来resolve.</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally"><code>Promise.prototype.finally(onFinally)</code></a></p>
+<p>添加一个事件处理回调于当前promise对象，并且在原promise对象解析完毕后，返回一个新的promise对象。回调会在当前promise运行完毕后被调用，无论当前promise的状态是完成(fulfilled)还是失败(rejected)</p>
+</li>
+</ul>
+<h3 id="自己实现剖析"><a href="#自己实现剖析" class="headerlink" title="自己实现剖析"></a>自己实现剖析</h3><p><a href="https://mp.weixin.qq.com/s/3xfLpQ2h0v8yt2W7opLwGw">https://mp.weixin.qq.com/s/3xfLpQ2h0v8yt2W7opLwGw</a></p>
+<h3 id="20行案例"><a href="#20行案例" class="headerlink" title="20行案例"></a>20行案例</h3><p><a href="https://mp.weixin.qq.com/s/oHBv7r6x7tVOwm-LsnIbgA">https://mp.weixin.qq.com/s/oHBv7r6x7tVOwm-LsnIbgA</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Promise</span>(<span class="params">excutor</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> self = <span class="keyword">this</span></span><br><span class="line">  self.onResolvedCallback = []</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">resolve</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      self.data = value</span><br><span class="line">      self.onResolvedCallback.forEach(<span class="function"><span class="params">callback</span> =&gt;</span> callback(value))</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  excutor(resolve.bind(self))</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">Promise</span>.prototype.then = <span class="function"><span class="keyword">function</span>(<span class="params">onResolved</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> self = <span class="keyword">this</span></span><br><span class="line">  returnnewPromise(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">    self.onResolvedCallback.push(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> result = onResolved(self.data)</span><br><span class="line">      <span class="keyword">if</span> (result instanceofPromise) &#123;</span><br><span class="line">        result.then(resolve)</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        resolve(result)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h4><ol>
+<li><p>首先来实现Promise构造函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Promise</span>(<span class="params">excutor</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> self = <span class="keyword">this</span></span><br><span class="line">  self.onResolvedCallback = [] <span class="comment">// Promise resolve时的回调函数集</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 传递给Promise处理函数的resolve</span></span><br><span class="line">  <span class="comment">// 这里直接往实例上挂个data</span></span><br><span class="line">  <span class="comment">// 然后把onResolvedCallback数组里的函数依次执行一遍就可以</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">resolve</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 注意promise的then函数需要异步执行</span></span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      self.data = value</span><br><span class="line">      self.onResolvedCallback.forEach(<span class="function"><span class="params">callback</span> =&gt;</span> callback(value))</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 执行用户传入的函数</span></span><br><span class="line">  excutor(resolve.bind(self))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>好，写到这里先回过头来看案例</p>
+</li>
+</ol>
+<h2 id="Event-Loop"><a href="#Event-Loop" class="headerlink" title="Event Loop"></a>Event Loop</h2><p><code>Event Loop是一个程序结构，用于等待和分派消息和事件</code>，我个人的理解是 JS 中的 Event Loop 是浏览器或 Node 的一种协调 JavaScript 单线程运行时不会阻塞的一种机制。</p>
+<h3 id="JS-的单线程"><a href="#JS-的单线程" class="headerlink" title="JS 的单线程"></a>JS 的单线程</h3><p>很多人都知道的是，JavaScript 是一门<strong>动态的解释型的语言</strong>，具有<strong>跨平台性</strong>。在被问到 JavaScript 为什么是一门单线程的语言，有的人可能会这么回答：“语言特性决定了 JavaScript 是一个单线程语言，JavaScript 天生是一个单线程语言”，这只不过是一层糖衣罢了。</p>
+<p>JavaScript 从诞生起就是单线程，原因大概是不想让浏览器变得太复杂，因为多线程需要共享资源、且有可能修改彼此的运行结果，对于一种网页脚本语言来说，这就太复杂了。</p>
+<p>准确的来说，我认为 JavaScript 的单线程是指 <strong>JavaScript 引擎是单线程</strong>的，JavaScript 的引擎并不是独立运行的，跨平台意味着 JavaScript 依赖其运行的宿主环境 — 浏览器(大部分情况下是浏览器)。</p>
+<p>浏览器需要渲染 DOM，JavaScript 可以修改 DOM 结构，JavaScript 执行时，浏览器 DOM 渲染停止。如果 JavaScript 引擎线程不是单线程的，那么可以同时执行多段 JavaScript，如果这多段 JavaScript 都操作 DOM，那么就会出现 DOM 冲突。</p>
+<p>举个例子来说，在同一时刻执行两个 script 对同一个 DOM 元素进行操作，一个修改 DOM，一个删除 DOM，那这样话浏览器就会懵逼了，它就不知道到底该听谁的，会有资源竞争，这也是 JavaScript 单线程的原因之一。</p>
+<h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><h4 id="浏览器的多线程"><a href="#浏览器的多线程" class="headerlink" title="浏览器的多线程"></a>浏览器的多线程</h4><p>之前说过，JavaScript 运行的宿主环境浏览器是多线程的。</p>
+<p>以 Chrome 来说，我们可以通过 Chrome 的任务管理器来看看。</p>
+<p><img src="/images/JavaScript.assets/640.png" alt="img"></p>
+<p>当你打开一个 Tab 页面的时候，就创建了一个进程。如果从一个页面打开了另一个页面，打开的页面和当前的页面属于同一站点的话，那么这个页面会复用父页面的渲染进程。</p>
+<h4 id="浏览器主线程常驻线程"><a href="#浏览器主线程常驻线程" class="headerlink" title="浏览器主线程常驻线程"></a>浏览器主线程常驻线程</h4><ol>
+<li><p>GUI 渲染线程</p>
+</li>
+<li><ul>
+<li>绘制页面，解析 HTML、CSS，构建 DOM 树，布局和绘制等</li>
+<li>页面重绘和回流</li>
+<li>与 JS 引擎线程互斥，也就是所谓的 JS 执行阻塞页面更新</li>
+</ul>
+</li>
+<li><p>JS 引擎线程</p>
+</li>
+<li><ul>
+<li>负责 JS 脚本代码的执行</li>
+<li>负责准执行准备好待执行的事件，即定时器计数结束，或异步请求成功并正确返回的事件</li>
+<li>与 GUI 渲染线程互斥，执行时间过长将阻塞页面的渲染</li>
+</ul>
+</li>
+<li><p>事件触发线程</p>
+</li>
+<li><ul>
+<li>负责将准备好的事件交给 JS 引擎线程执行</li>
+<li>多个事件加入任务队列的时候需要排队等待(JS 的单线程)</li>
+</ul>
+</li>
+<li><p>定时器触发线程</p>
+</li>
+<li><ul>
+<li>负责执行异步的定时器类的事件，如 setTimeout、setInterval</li>
+<li>定时器到时间之后把注册的回调加到任务队列的队尾</li>
+</ul>
+</li>
+<li><p>HTTP 请求线程</p>
+</li>
+<li><ul>
+<li>负责执行异步请求</li>
+<li>主线程执行代码遇到异步请求的时候会把函数交给该线程处理，当监听到状态变更事件，如果有回调函数，该线程会把回调函数加入到任务队列的队尾等待执行</li>
+</ul>
+</li>
+</ol>
+<p>这里没看懂没关系，后面我会再说。</p>
+<h3 id="浏览器端的-Event-Loop"><a href="#浏览器端的-Event-Loop" class="headerlink" title="浏览器端的 Event Loop"></a>浏览器端的 Event Loop</h3><p><img src="/images/JavaScript.assets/640-20200402222040514.png" alt="img"></p>
+<p>上图是一张 JS 的运行机制图，Js 运行时大致会分为几个部分：</p>
+<ol>
+<li>Call Stack：调用栈(执行栈)，所有同步任务在主线程上执行，形成一个执行栈，因为 JS 单线程的原因，所以调用栈中每次只能执行一个任务，当遇到的同步任务执行完之后，由任务队列提供任务给调用栈执行。</li>
+<li>Task Queue：任务队列，存放着异步任务，当异步任务可以执行的时候，任务队列会通知主线程，然后该任务会进入主线程执行。任务队列中的都是已经完成的异步操作，而不是说注册一个异步任务就会被放在这个任务队列中。</li>
+</ol>
+<p>说到这里，Event Loop 也可以理解为：不断地从任务队列中取出任务执行的一个过程。</p>
+<h4 id="同步任务和异步任务"><a href="#同步任务和异步任务" class="headerlink" title="同步任务和异步任务"></a>同步任务和异步任务</h4><p>上文已经说过了 JavaScript 是一门单线程的语言，一次只能执行一个任务，如果所有的任务都是同步任务，那么程序可能因为等待会出现假死状态，这对于一个用户体验很强的语言来说是非常不友好的。</p>
+<p>比如说向服务端请求资源，你不可能一直不停的循环判断有没有拿到数据，就好像你点了个外卖，点完之后就开始一直打电话问外卖有没有送到，外卖小哥都会抄着锅铲来打你(狗头)。因此，在 JavaScript 中任务有了同步任务和异步任务，异步任务通过注册回调函数，等到数据来了就通知主程序。</p>
+<ol>
+<li>同步任务：必须等到结果来了之后才能做其他的事情，举例来说就是你烧水的时候一直等在水壶旁边等水烧开，期间不做其他的任何事情。</li>
+<li>异步任务：不需要等到结果来了才能继续往下走，等结果期间可以做其他的事情，结果来了会收到通知。举例来说就是你烧水的时候可以去做自己想做的事情，听到水烧开的声音之后再去处理。</li>
+</ol>
+<p>从概念就可以看出来，异步任务从一定程度上来看比同步任务更高效一些，核心是提高了用户体验。</p>
+<h4 id="Event-Loop-1"><a href="#Event-Loop-1" class="headerlink" title="Event Loop"></a>Event Loop</h4><p>Event Loop 很好的调度了任务的运行，宏任务和微任务也知道了，现在我们就来看看它的调度运行机制。</p>
+<p>JavaScript 的代码执行时，主线程会从上到下一步步的执行代码，同步任务会被依次加入执行栈中先执行，异步任务会在拿到结果的时候将注册的回调函数放入任务队列，当执行栈中的没有任务在执行的时候，引擎会从任务队列中读取任务压入执行栈(Call Stack)中处理执行。</p>
+<h4 id="宏任务和微任务"><a href="#宏任务和微任务" class="headerlink" title="宏任务和微任务"></a>宏任务和微任务</h4><p>现在就有一个问题了，任务队列是一个消息队列，先进先出，那就是说，后来的事件都是被加在队尾等到前面的事件执行完了才会被执行。如果在执行的过程中突然有重要的数据需要获取，或是说有事件突然需要处理一下，<strong>按照队列的先进先出顺序这些是无法得到及时处理的。这个时候就催生了宏任务和微任务，微任务使得一些异步任务得到及时的处理</strong>。</p>
+<p>曾经看到的一个例子很好，宏任务和微任务形象的来说就是：你去营业厅办一个业务会有一个排队号码，当叫到你的号码的时候你去窗口办充值业务(宏任务执行)，在你办理充值的时候你又想改个套餐(微任务)，这个时候工作人员会直接帮你办，不可能让你重新排队。</p>
+<p>所以上文说过的异步任务又分为宏任务和微任务，JS 运行时任务队列会分为宏任务队列和微任务队列，分别对应宏任务和微任务。</p>
+<p>先介绍一下(浏览器环境的)宏任务和微任务大致有哪些：</p>
+<ul>
+<li><p>宏任务：</p>
+</li>
+<li><ol>
+<li>script(整体的代码)</li>
+<li>setTimeout</li>
+<li>setInterval</li>
+<li>I/O 操作</li>
+<li>UI 渲染 (对这个笔者持保留意见)</li>
+</ol>
+</li>
+<li><p>微任务：</p>
+</li>
+<li><ol>
+<li>Promise.then</li>
+<li>MutationObserver</li>
+</ol>
+</li>
+</ul>
+<h4 id="事件运行顺序"><a href="#事件运行顺序" class="headerlink" title="事件运行顺序"></a>事件运行顺序</h4><ol>
+<li>执行同步任务，同步任务不需要做特殊处理，直接执行(下面的步骤中遇到同步任务都是一样处理) — 第一轮从 script开始</li>
+<li>从宏任务队列中取出队头任务执行</li>
+<li>如果产生了宏任务，将宏任务放入宏任务队列，下次轮循的时候执行</li>
+<li>如果产生了微任务，将微任务放入微任务队列</li>
+<li>执行完当前宏任务之后，取出微任务队列中的所有任务依次执行</li>
+<li>如果微任务执行过程中产生了新的微任务，则继续执行微任务，直到微任务的队列为空</li>
+<li>轮循，循环以上 2 - 6</li>
+</ol>
+<p>总的来说就是：同步任务/宏任务 -&gt; 执行产生的所有微任务(包括微任务产生的微任务) -&gt; 同步任务/宏任务 -&gt; 执行产生的所有微任务(包括微任务产生的微任务) -&gt; 循环……</p>
+<p>注意：微任务队列</p>
+<h4 id="举个栗子"><a href="#举个栗子" class="headerlink" title="举个栗子"></a>举个栗子</h4><p>光说不练假把式，现在就来看一个例子：</p>
+<p><img src="/images/JavaScript.assets/640-20200402222340611.png" alt="img">举个栗子</p>
+<p>放图的原因是为了让大家在看解析之前可以先自己按照运行顺序走一遍，写好答案之后再来看解析。<br>解析：<br>(用绿色的表示同步任务和宏任务，红色表示微任务)</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">+  <span class="built_in">console</span>.log(<span class="string">'script start'</span>)</span><br><span class="line">+  setTimeout(function() &#123;</span><br><span class="line">+    <span class="built_in">console</span>.log(<span class="string">'setTimeout'</span>)</span><br><span class="line">+  &#125;, <span class="number">0</span>)</span><br><span class="line">+  <span class="keyword">new</span> Promise(<span class="function"><span class="params">(resolve, reject)</span>=&gt;</span>&#123;</span><br><span class="line">+    <span class="built_in">console</span>.log(<span class="string">"promise1"</span>)</span><br><span class="line">+    resolve()</span><br><span class="line">+  &#125;)</span><br><span class="line">-  .<span class="keyword">then</span>(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">-    <span class="built_in">console</span>.log(<span class="string">"then11"</span>)</span><br><span class="line">+    <span class="keyword">new</span> Promise(<span class="function"><span class="params">(resolve, reject)</span>=&gt;</span>&#123;</span><br><span class="line">+      <span class="built_in">console</span>.log(<span class="string">"promise2"</span>)</span><br><span class="line">+      resolve();</span><br><span class="line">+    &#125;)</span><br><span class="line">-    .<span class="keyword">then</span>(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">-      <span class="built_in">console</span>.log(<span class="string">"then2-1"</span>)</span><br><span class="line">-    &#125;)</span><br><span class="line">-    .<span class="keyword">then</span>(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">-      <span class="built_in">console</span>.log(<span class="string">"then2-2"</span>)</span><br><span class="line">-    &#125;)</span><br><span class="line">-  &#125;)</span><br><span class="line">-  .<span class="keyword">then</span>(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">-    <span class="built_in">console</span>.log(<span class="string">"then12"</span>)</span><br><span class="line">-  &#125;)</span><br><span class="line">+  <span class="built_in">console</span>.log(<span class="string">'script end'</span>)</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>首先遇到 console.log()，输出 <code>script start</code></li>
+<li>遇到 setTimeout 产生宏任务，注册到<strong>宏任务队列[setTimeout]</strong>，下一轮 Event Loop 的时候在执行</li>
+<li>然后遇到 new Promise 构造声明(同步)，log 输出 <code>promise1</code>，然后 resolve</li>
+<li>resolve 匹配到 <strong>promise1 的第一个 then</strong>，把这个 then 注册到<strong>微任务队列[then11]中</strong>，继续当前整体脚本的执行</li>
+<li>遇到最后的一个 log，输出 <code>script end</code>，<strong>当前执行栈清空</strong></li>
+<li><strong>从微任务队列中取出队头任务’then11’</strong> 进行执行，其中有一个 log，输出 <code>then11</code></li>
+<li>往下遇到 new Promise 构造声明(同步)，log 输出 <code>promise2</code>，然后 resolve</li>
+<li>resolve 匹配到 <strong>promise2 的第一个 then</strong>，把这个 then 注册到<strong>微任务队列[then2-1]</strong>，当前 then11 可执行部分结束，然后产生了 <strong>promise1 的第二个 then</strong>，把这个 then 注册到<strong>微任务队列[then2-1, then12]</strong></li>
+<li><strong>拿出微任务队头任务’then2-1’</strong> 执行，log 输出 <code>then2-1</code>，触发 <strong>promise2 的第二个 then</strong>，注册到<strong>微任务队列[then12, then2-2]</strong></li>
+<li><strong>拿出微任务队头任务’then12’</strong>，log 输出 <code>then12</code></li>
+<li><strong>拿出微任务队头任务’then2-2’</strong>，log 输出 <code>then2-2</code></li>
+<li>微任务队列执行完毕，别忘了宏任务队列中的 setTimeout，log 输出 <code>setTimeout</code></li>
+</ol>
+<p>经过以上一番缜(xia)密(gao)分析，希望没有绕晕你，最后的输出结果就是：<br><code>script start -&gt; promise1 -&gt; script end -&gt; then11 -&gt; promise2 -&gt; then2-1 -&gt; then12 -&gt; then2-2 -&gt; setTimeout</code></p>
+<h4 id="宏任务？微任务？"><a href="#宏任务？微任务？" class="headerlink" title="宏任务？微任务？"></a>宏任务？微任务？</h4><p>不知道大家看了宏任务和微任务之后会不会有一个疑惑，宏任务和微任务都是异步任务，微任务之前说过了是为了及时解决一些必要事件而产生的。</p>
+<ul>
+<li><p>为什么要有微任务？<br>为什么要有微任务的原因前面已经说了，这里就不再赘述，简单说一下就是为了及时处理一些任务，不然等到最后再执行的时候拿到的数据可能已经是被污染的数据达不到预期目标了。</p>
+</li>
+<li><p>是什么宏任务？什么是微任务？<br>相信大家在学习 Event Loop 查找资料的时候，肯定各种资料里面都会讲到宏任务和微任务，但是不知道你有没有灵魂拷问过你自己：<code>什么是宏任务？什么是微任务？怎么区分宏任务和微任务？</code>不能只是默许接受这个概念，在这里，我根据我的个人理解进行一番说(hu)明(che)</p>
+</li>
+<li><p>宏任务和微任务的真面目<br>其实在 Chrome 的源码中并没有什么宏任务和微任务的代码或是说明，在 <strong>JS 大会</strong>[3]上提到过微任务这个名词，但是也没有说到底什么是微任务。</p>
+<p>宏任务<br>文章最开始的时候说过，在 chrome 里，每个页面都对应一个进程。而该进程又有多个线程，比如 JS 线程、渲染线程、IO 线程、网络线程、定时器线程等等，这些线程之间的通信是通过向对象的任务队列中添加一个任务（postTask）来实现的。<strong>宏任务的本质可以认为是多线程事件循环或消息循环，也就是线程间通信的一个消息队列。</strong></p>
+<p>就拿 setTimeout 举例来说，当遇到它的时候，浏览器就会对 Event Loop 说：嘿，我有一个任务交给你，Event Loop 就会说：好的，我会把它加到我的 todoList 中，之后我会执行它，它是需要调用 API 的。</p>
+<p><strong>宏任务的真面目是浏览器派发，与 JS 引擎无关的，参与了 Event Loop 调度的任务</strong></p>
+<p>微任务<br>微任务是在运行宏任务/同步任务的时候产生的，是属于当前任务的，所以它不需要浏览器的支持，内置在 JS 当中，直接在 JS 的引擎中就被执行掉了。</p>
+</li>
+</ul>
+<h4 id="特殊的点"><a href="#特殊的点" class="headerlink" title="特殊的点"></a>特殊的点</h4><ol>
+<li>async 隐式返回 Promise 作为结果</li>
+<li>执行完 await 之后直接跳出 async 函数，让出执行的所有权</li>
+<li>当前任务的其他代码执行完之后再次获得执行权进行执行</li>
+<li>立即 resolve 的 Promise 对象，是在本轮”事件循环”的结束时执行，而不是在下一轮”事件循环”的开始时</li>
+</ol>
+<h4 id="再举个栗子"><a href="#再举个栗子" class="headerlink" title="再举个栗子"></a>再举个栗子</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'script start'</span>)</span><br><span class="line"></span><br><span class="line">  asyncfunction async1() &#123;</span><br><span class="line">      <span class="keyword">await</span> async2()</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'async1 end'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  asyncfunction async2() &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'async2 end'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  async1()</span><br><span class="line"></span><br><span class="line">  setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'setTimeout'</span>)</span><br><span class="line">  &#125;, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">  newPromise(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'Promise'</span>)</span><br><span class="line">      resolve()</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'promise1'</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'promise2'</span>)</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'script end'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>按照之前的分析方法去分析之后就会得出一个结果：<br><code>script start =&gt; async2 end =&gt; Promise =&gt; script end =&gt; promise1 =&gt; promise2 =&gt; async1 end =&gt; setTimeout</code></p>
+<p>可以看出 async1 函数获取执行权是作为微任务的队尾，但是，在 Chrome73(金丝雀) 版本之后，async 的执行优化了，它会在 promise1 和 promise2 的输出之前执行。笔者大概了解了一下应该是用 PromiseResolve 对 await 进行了优化，减少了 Promise 的再次创建，有兴趣的小伙伴可以看看 Chrome 的源码。</p>
+<h3 id="Node-中的-Event-Loop"><a href="#Node-中的-Event-Loop" class="headerlink" title="Node 中的 Event Loop"></a>Node 中的 Event Loop</h3><p>Node 中也有宏任务和微任务，与浏览器中的事件循环类似。Node 与浏览器事件循环不同，其中有多个宏任务队列，而浏览器是只有一个宏任务队列。</p>
+<p>Node 的架构底层是有 libuv，它是 Node 自身的动力来源之一，通过它可以去调用一些底层操作，Node 中的 Event Loop 功能就是在 libuv 中封装实现的。</p>
+<h4 id="宏任务和微任务-1"><a href="#宏任务和微任务-1" class="headerlink" title="宏任务和微任务"></a>宏任务和微任务</h4><p>Node 中的宏任务和微任务在浏览器端的 JS 相比增加了一些，这里只列出浏览器端没有的：</p>
+<ul>
+<li><p>宏任务</p>
+</li>
+<li><ol>
+<li>setImmediate</li>
+</ol>
+</li>
+<li><p>微任务</p>
+</li>
+<li><ol>
+<li>process.nextTick</li>
+</ol>
+</li>
+</ul>
+<h4 id="事件循环机制的六个阶段"><a href="#事件循环机制的六个阶段" class="headerlink" title="事件循环机制的六个阶段"></a><strong>事件循环机制的六个阶段</strong></h4><p><img src="/images/JavaScript.assets/image-20200402223627057.png" alt="image-20200402223627057"></p>
+<p>Node 的事件循环分成了六个阶段，每个阶段对应一个宏任务队列，相当于是宏任务进行了一个分类。</p>
+<ol>
+<li>timers(计时器)<br>执行 setTimeout 以及 setInterval 的回调</li>
+<li>I/O callbacks<br>处理网络、流、TCP 的错误回调</li>
+<li>idel, prepare — 闲置阶段<br>node 内部使用</li>
+<li>poll(轮循)<br>执行 poll 中的 I/O 队列，检查定时器是否到时间</li>
+<li>check(检查)<br>存放 setImmediate 回调</li>
+<li>close callbacks<br>关闭回调，例如 sockect.on(‘close’)</li>
+</ol>
+<h4 id="轮循顺序"><a href="#轮循顺序" class="headerlink" title="轮循顺序"></a>轮循顺序</h4><p>执行的轮循顺序 — 每个阶段都要等对应的宏任务队列执行完毕才会进入到下一个阶段的宏任务队列</p>
+<ol>
+<li>timers</li>
+<li>I/O callbacks</li>
+<li>poll</li>
+<li>setImmediate</li>
+<li>close events</li>
+</ol>
+<p>每两个阶段之间执行微任务队列</p>
+<h4 id="Event-Loop-过程"><a href="#Event-Loop-过程" class="headerlink" title="Event Loop 过程"></a>Event Loop 过程</h4><ol>
+<li>执行全局的 script 同步代码</li>
+<li>执行微任务队列，先执行所有 Next Tick 队列中的所有任务，再执行其他的微任务队列中的所有任务</li>
+<li>开始执行宏任务，共六个阶段，从第一个阶段开始执行自己宏任务队列中的所有任务(浏览器是从宏任务队列中取第一个执行！！)</li>
+<li>每个阶段的宏任务执行完毕之后，开始执行微任务</li>
+<li>TimersQueue -&gt; 步骤2 -&gt; I/O Queue -&gt; 步骤2 -&gt; Check Queue -&gt; 步骤2 -&gt; Close Callback Queue -&gt; 步骤2 -&gt; TimersQueue …</li>
+</ol>
+<p>这里要注意的是，nextTick 事件是一个单独的队列，它的优先级会高于微任务，所以在当前宏任务/同步任务执行完成之后，会先执行 nextTick 队列中的所有任务，再去执行微任务队列中的所有任务。</p>
+<h3 id="setTimeout-和-setImmediate"><a href="#setTimeout-和-setImmediate" class="headerlink" title="setTimeout 和 setImmediate"></a>setTimeout 和 setImmediate</h3><p>在这里要单独说一下 setTimeout 和 setImmediate，setTimeout 定时器很熟悉，那就说说 setImmediate</p>
+<p>setImmediate() 方法用于把一些需要长时间运行的操作放在一个回调函数里，并在浏览器完成其他操作（如事件和显示更新）后立即运行回调函数。从定义来看就是为了防止一些耗时长的操作阻塞后面的操作，这也是为什么 check 阶段运行顺序排的比较后。</p>
+<h3 id="举个栗子-1"><a href="#举个栗子-1" class="headerlink" title="举个栗子"></a>举个栗子</h3><p>我们来看这样的一个例子：</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'setTimeout'</span>)</span><br><span class="line">&#125;, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">setImmediate(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'setImmediate'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>这里涉及 timers 阶段和 check 阶段，按照上面的运行顺序来说，timers 阶段是在第一个执行的，会早于 check 阶段。运行这段程序可以看到如下的结果：</p>
+<p><img src="/images/JavaScript.assets/image-20200402224016596.png" alt="image-20200402224016596"></p>
+<p>可是再多运行几次，你就会看到如下的结果：</p>
+<p><img src="/images/JavaScript.assets/image-20200402224028075.png" alt="image-20200402224028075"></p>
+<p>setImmediate 的输出跑到 setTimeout 前面去了，这时候就是：小朋友你是否有很多的问号❓</p>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>我们来分析一下原因，timers 阶段确实是在 check 阶段之前，但是在 timers 阶段时候，这里的 setTimeout 真的到了执行的时间吗？</p>
+<p>这里就要先看看 <code>setTiemout(fn, 0)</code>，这个语句的意思不是指不延迟的执行，而是指在可以执行 setTimeout 的时候就立即执行它的回调，也就是处理完当前事件的时候立即执行回调。</p>
+<p>在 Node 中 setTimeout 第二个时间参数的最小值是 1ms，小于 1ms 会被初始化为 1(浏览器中最小值是 4ms)，所以在这里 <code>setTimeout(fn, 0) === setTimeout(fn, 1)</code></p>
+<p>setTimeout 的回调函数在 timers 阶段执行，setImmediate 的回调函数在 check 阶段执行，Event Loop 的开始会先检查 timers 阶段，但是在代码开始运行之前到 timers 阶段(代码的启动、运行)会消耗一定的时间，所以会出现两种情况：</p>
+<ol>
+<li>timers 前的准备时间超过 1ms，满足 loop -&gt; timers &gt;= 1，setTimeout 的时钟周期到了，则执行 timers 阶段(setTimeout)的回调函数</li>
+<li>timers 前的准备时间小于 1ms，还没到 setTimeout 预设的时间，则先执行 check 阶段(setImmediate)的回调函数，下一次 Event Loop 再进入 timers 阶段执行 timer 阶段(setTimeout)的回调函数</li>
+</ol>
+<p>最开始就说了，一个优秀的程序员要让自己的代码按照自己想要的顺序运行，下面我们就来控制一下 setTimeout 和 setImediate 的运行。</p>
+<ul>
+<li>让 setTimeout 先执行<br>上面代码运行顺序不同无非就是因为 Node 准备时间的不确定性，我们可以直接手动延长准备时间👇</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> start = <span class="built_in">Date</span>.now()</span><br><span class="line">  <span class="keyword">while</span> (<span class="built_in">Date</span>.now() - start &lt; <span class="number">10</span>)</span><br><span class="line">  setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'setTimeout'</span>)</span><br><span class="line">  &#125;, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">  setImmediate(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'setImmediate'</span>)</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>让 setImmediate 先执行<br>setImmediate 是在 check 阶段执行，相对于 setTimeout 来说是在 timers 阶段之后，只需要想办法把程序的运行环境控制在 timers 阶段之后就可以了。</p>
+<p>让程序至少从 I/O callbacks 阶段开始 — 可以套一层文件读写把把程序控制在 I/O callbacks 阶段的运行环境中👇</p>
+</li>
+</ul>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</span><br><span class="line"></span><br><span class="line">fs.readFile(__dirname, <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'setTimeout'</span>)</span><br><span class="line">  &#125;, <span class="number">0</span>)</span><br><span class="line">  </span><br><span class="line">  setImmediate(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'setImmediate'</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Node-11-x-的变化"><a href="#Node-11-x-的变化" class="headerlink" title="Node 11.x 的变化"></a>Node 11.x 的变化</h3><p>timers 阶段的执行有所变化</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span><span class="built_in">console</span>.log(<span class="string">'timeout1'</span>))</span><br><span class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line"> <span class="built_in">console</span>.log(<span class="string">'timeout2'</span>)</span><br><span class="line"> Promise.resolve().<span class="keyword">then</span>(<span class="function"><span class="params">()</span> =&gt;</span><span class="built_in">console</span>.log(<span class="string">'promise resolve'</span>))</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>node 10 及之前的版本：<br>要考虑上一个定时器执行完成时，下一个定时器是否到时间加入了任务队列中，如果未到时间，先执行其他的代码。<br>比如：<br>timer1 执行完之后 timer2 到了任务队列中，顺序为 <code>timer1 -&gt; timer2 -&gt; promise resolve</code><br>timer2 执行完之后 timer2 还没到任务队列中，顺序为 <code>timer1 -&gt; promise resolve -&gt; timer2</code></li>
+<li>node 11 及其之后的版本：<br><code>timeout1 -&gt; timeout2 -&gt; promise resolve</code><br>一旦执行某个阶段里的一个宏任务之后就立刻执行微任务队列，这和浏览器端运行是一致的。</li>
+</ol>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>Node 和端浏览器端有什么不同</p>
+<ol>
+<li>浏览器端的 Event Loop 和 Node.js 中的 Event Loop 是不同的，实现机制也不一样</li>
+<li>Node.js 可以理解成有4个宏任务队列和2个微任务队列，但是执行宏任务时有6个阶段</li>
+<li>Node.js 中限制性全局 script 代码，执行完同步代码后，先从微任务队列 Next Tick Queue 中取出所有任务放入调用栈执行，再从其他微任务队列中取出所有任务放入调用栈中执行，然后开始宏任务的6个阶段，每个阶段都将其宏任务队列中的所有任务都取出来执行(浏览器是只取第一个执行)，每个宏任务阶段执行完毕之后开始执行微任务，再开始执行下一阶段宏任务，以此构成事件循环</li>
+<li>宏任务包括 ….</li>
+<li>微任务包括 ….</li>
+</ol>
+<p>看到这里，你应该对浏览器端和 Node 端的 Event Loop 有了一定的了解，那就留一个题目。</p>
+<p><img src="/images/JavaScript.assets/image-20200402224502960.png" alt="image-20200402224502960"></p>
+<p>不直接放代码是想让大家先自己思考然后在敲代码运行一遍~</p>
+</div><div class="article-tags size-small is-uppercase mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E5%A4%A7%E5%89%8D%E7%AB%AF/">大前端</a><a class="link-muted mr-2" rel="tag" href="/tags/JavaScript/">JavaScript</a></div><div class="sharethis-inline-share-buttons"></div><script src="https://platform-api.sharethis.com/js/sharethis.js#property=5e987269931c3700123db905&amp;product=inline-share-buttons" defer></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button is-info donate"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/radoapx/rad-figure-bed/PicGo/blog/donates/20200416220326.JPG" alt="支付宝"></span></a><a class="button is-warning donate" onclick="document.getElementById(&#039;paypal-donate-form&#039;).submit()"><span class="icon is-small"><i class="fab fa-paypal"></i></span><span>Paypal</span></a><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" rel="noopener" id="paypal-donate-form"><input type="hidden" name="cmd" value="_donations"><input type="hidden" name="business" value="845225343@qq.com"><input type="hidden" name="currency_code" value="USD"></form><a class="button is-success donate"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/radoapx/rad-figure-bed/PicGo/blog/donates/20200416220459.JPG" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/05/16/%E5%A4%A7%E5%89%8D%E7%AB%AF/WebSocket/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">WebSocket 笔记</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/05/16/%E5%A4%A7%E5%89%8D%E7%AB%AF/Node.js/"><span class="level-item">Node.js</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="is-rounded" src="/img/avatar.jpeg" alt="radoapx"></figure><p class="title is-size-4 is-block line-height-inherit">radoapx</p><p class="is-size-6 is-block">代码&amp;生活</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Njtech,China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">17</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">2</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">16</p></a></div></div></nav><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/radoapx"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/keep_escalating"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Gmail" href="mailto:radoapx@gmail.com"><i class="fas fa-envelope"></i></a></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content size-small"><p><time dateTime="2020-05-16T06:45:05.029Z">2020-05-16</time></p><p class="title is-6"><a class="link-muted" href="/2020/05/16/%E8%BF%90%E7%BB%B4/PM2/">PM2</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-05-16T06:45:05.028Z">2020-05-16</time></p><p class="title is-6"><a class="link-muted" href="/2020/05/16/%E8%BF%90%E7%BB%B4/Nginx/">Nginx</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-05-16T06:45:05.027Z">2020-05-16</time></p><p class="title is-6"><a class="link-muted" href="/2020/05/16/%E5%A4%A7%E5%89%8D%E7%AB%AF/%E8%B7%A8%E5%9F%9F/">跨域相关</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-05-16T06:45:05.026Z">2020-05-16</time></p><p class="title is-6"><a class="link-muted" href="/2020/05/16/%E5%A4%A7%E5%89%8D%E7%AB%AF/webpack/">Webpack 笔记</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-05-16T06:45:05.024Z">2020-05-16</time></p><p class="title is-6"><a class="link-muted" href="/2020/05/16/%E5%A4%A7%E5%89%8D%E7%AB%AF/vue/">Vue 笔记</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile is-mobile" href="https://www.apple.com.cn/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Apple</span></span><span class="level-right"><span class="level-item tag">www.apple.com.cn</span></span></a></li><li><a class="level is-mobile is-mobile" href="http://acm.hdu.edu.cn/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">HDU OJ</span></span><span class="level-right"><span class="level-item tag">acm.hdu.edu.cn</span></span></a></li><li><a class="level is-mobile is-mobile" href="https://www.trumangu.fun/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">TrumanGu</span></span><span class="level-right"><span class="level-item tag">www.trumangu.fun</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" id="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="is-flex" href="#JavaScript"><span class="mr-2">1</span><span>JavaScript</span></a><ul class="menu-list"><ul class="menu-list"><li><a class="is-flex" href="#技巧"><span class="mr-2">1.1.1</span><span>技巧</span></a></li><li><a class="is-flex" href="#Array-reduce-而不是链接-Array-filter-和-Array-map"><span class="mr-2">1.1.2</span><span>Array.reduce 而不是链接 Array.filter 和 Array.map</span></a></li><li><a class="is-flex" href="#描述-1"><span class="mr-2">1.1.3</span><span>描述</span></a></li></ul><li><a class="is-flex" href="#Proxy"><span class="mr-2">1.2</span><span>Proxy</span></a><ul class="menu-list"><li><a class="is-flex" href="#默认值-“零值”"><span class="mr-2">1.2.1</span><span>默认值&amp;#x2F;“零值”</span></a></li></ul></li><li><a class="is-flex" href="#Promise"><span class="mr-2">1.3</span><span>Promise</span></a><ul class="menu-list"><li><a class="is-flex" href="#构造函数语法"><span class="mr-2">1.3.1</span><span>构造函数语法</span></a></li><li><a class="is-flex" href="#介绍"><span class="mr-2">1.3.2</span><span>介绍</span></a></li><li><a class="is-flex" href="#属性"><span class="mr-2">1.3.3</span><span>属性</span></a></li><li><a class="is-flex" href="#方法"><span class="mr-2">1.3.4</span><span>方法</span></a></li><li><a class="is-flex" href="#方法-1"><span class="mr-2">1.3.5</span><span>方法</span></a></li><li><a class="is-flex" href="#自己实现剖析"><span class="mr-2">1.3.6</span><span>自己实现剖析</span></a></li><li><a class="is-flex" href="#实现过程"><span class="mr-2">1.3.7</span><span>实现过程</span></a></li></ul></li><li><a class="is-flex" href="#Event-Loop"><span class="mr-2">1.4</span><span>Event Loop</span></a><ul class="menu-list"><li><a class="is-flex" href="#JS-的单线程"><span class="mr-2">1.4.1</span><span>JS 的单线程</span></a></li><li><a class="is-flex" href="#浏览器主线程常驻线程"><span class="mr-2">1.4.2</span><span>浏览器主线程常驻线程</span></a></li><li><a class="is-flex" href="#再举个栗子"><span class="mr-2">1.4.3</span><span>再举个栗子</span></a></li><li><a class="is-flex" href="#Event-Loop-过程"><span class="mr-2">1.4.4</span><span>Event Loop 过程</span></a></li><li><a class="is-flex" href="#setTimeout-和-setImmediate"><span class="mr-2">1.4.5</span><span>setTimeout 和 setImmediate</span></a></li><li><a class="is-flex" href="#分析"><span class="mr-2">1.4.6</span><span>分析</span></a></li><li><a class="is-flex" href="#Node-11-x-的变化"><span class="mr-2">1.4.7</span><span>Node 11.x 的变化</span></a></li><li><a class="is-flex" href="#小结"><span class="mr-2">1.4.8</span><span>小结</span></a></li></ul></li></ul></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/%E5%8D%9A%E5%AE%A2/"><span class="level-start"><span class="level-item">博客</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%AC%94%E8%AE%B0/"><span class="level-start"><span class="level-item">笔记</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/CSS/"><span class="tag">CSS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Element/"><span class="tag">Element</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML/"><span class="tag">HTML</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTTP/"><span class="tag">HTTP</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/JavaScript/"><span class="tag">JavaScript</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Nginx/"><span class="tag">Nginx</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PM2/"><span class="tag">PM2</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Vue/"><span class="tag">Vue</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/WebSocket/"><span class="tag">WebSocket</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/node/"><span class="tag">node</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/webpack/"><span class="tag">webpack</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%A7%E5%89%8D%E7%AB%AF/"><span class="tag">大前端</span><span class="tag is-grey-lightest">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"><span class="tag">正则表达式</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%B7%A8%E5%9F%9F/"><span class="tag">跨域</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo%201000.png" alt="Radoapx&#039;s Zone" height="28"></a><p class="size-small"><span>&copy; 2020 Radoapx</span>  Surreptitious <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="GitHub" href="https://github.com/radoapx"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            site: {
+                url: 'http://yoursite.com',
+                external_link: {"enable":true,"exclude":[]}
+            },
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
